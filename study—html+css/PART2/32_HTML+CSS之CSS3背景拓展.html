@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3背景拓展</title>
+    <style>
+        /* contain：包含，图片会自动缩放填充在盒子中，可能会产生一些空白区域 */
+        /* cover：覆盖，图片会自动放缩覆盖整个盒子，溢出部分自动隐藏 */
+        .box1{ 
+            width: 1000px; height: 700px; 
+            border: 1px solid black ; 
+            background: url('../img/img1.jpg') no-repeat;
+            /* background-size: contain;     */
+            background-size: cover;    
+        }
+
+        /* border-box: 从整个盒子边沿开始平铺（包括覆盖边框部分）
+        content-box：从内容区域开始平铺
+        padding-box：从盒子的padding区域开始平铺（不覆盖边框部分） */
+        .box2{ 
+            width: 1400px;
+            height: 1200px;
+            border: 40px solid rgba(0,0,0, .5);
+            padding: 30px;
+            background: url('../img/img2.jpg');
+            background-origin:  border-box;
+            background-clip: content-box;
+        }
+        .box3{ 
+            width: 1400px;
+            height: 1200px;
+            border: 40px solid rgba(0,0,0, .5);
+            padding: 30px;
+            margin: 50px 0;
+            background: url('../img/img2.jpg') border-box  border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

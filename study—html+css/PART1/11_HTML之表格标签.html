@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>表格标签</title>
+    </head>
+    <body>
+        <!-- 没有添加表格属性的表格 -->
+        <table>
+            <capiton>天气预报</capiton>
+            <tHead>
+                <tr>
+                    <th>日期</th>
+                    <th>天气情况</th>
+                    <th>出行情况</th>
+                </tr>
+            </tHead>
+            <tBody>
+                <tr>
+                    <td>2020年1月1日</td>
+                    <td><img src="../img/晴天（白天） .png"></td>
+                    <td>天气晴朗，宜出门</td>
+                </tr>
+                <tr>
+                    <td>2020年1月2日</td>
+                    <td><img src="../img/大雨.png"></td>
+                    <td>大雨，出门请带雨伞</td>
+                </tr>
+            </tBody>
+            <tFood>
+                <!-- 一般常用于需要统计的表格 -->
+            </tFood>
+        </table>
+
+        <!-- 添加表格属性的表格 -->
+        <!-- 定义表格的边框、单元格内的空间、单元格之间的空间 -->
+        <table border="1" cellpadding="8" cellspacing="10"> 
+            <capiton>天气预报</capiton>
+            <tHead>
+                <tr>
+                    <!-- 合并列 -->
+                    <th colspan="2">日期</th>
+                    <th>天气情况</th>
+                    <th>出行情况</th>
+                </tr>
+            </tHead>
+            <tBody>
+                <tr>
+                    <!-- 合并行 -->
+                    <td rowspan="2">2020年1月1日</td>
+                    <td>白天</td>
+                    <td><img src="../img/晴天（白天） .png"></td>
+                    <td>天气晴朗，宜出门</td>
+                </tr>
+                <tr>
+                    <td>晚上</td>
+                    <td><img src="../img/晴天（白天） .png" alt=""></td>
+                    <td>天气晴朗，宜出门</td>
+                </tr>
+                <tr>
+                     <!-- 合并行 -->
+                    <td rowspan="2">2020年1月2日</td>
+                    <td>白天</td>
+                    <td><img src="../img/大雨.png"></td>
+                    <td>大雨，出门请带雨伞</td>
+                </tr>
+                <tr>
+                    <td>晚上</td>
+                    <td><img src="../img/大雨.png" alt=""></td>
+                    <td>大雨，出门请带雨伞</td>
+                </tr>
+            </tBody>
+            <tFood>
+                <!-- 一般常用于需要统计的表格 -->
+            </tFood>
+        </table>
+    </body>
+</html>

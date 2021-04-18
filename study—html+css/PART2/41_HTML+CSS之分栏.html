@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分栏操作</title>
+    <style>
+        .box{
+            width: 700px;
+            height: 400px;
+            border: 1px black solid ;
+            margin: 30px auto ;
+            column-count : 4;
+            column-width: 100px;
+            /* 分栏间距 */
+            column-gap: 40px;
+            /* 分栏分割线 */
+            column-rule: 1px red dashed;
+        }
+        .box h2{
+            /* 合并分栏，一般用于标题 */
+            column-span: all; 
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>ASML中国总裁：对华出口EUV光刻机在等荷兰政府许可</h2>
+        <p>11月5日，在第三届中国国际进口博览会现场，荷兰光刻机巨头阿斯麦（ASML）全球副总裁、中国区总裁沈波在接受澎湃新闻（www.thepaper.cn）专访时表示，该公司对向中国出口集成电路光刻机持开放态度，对全球客户均一视同仁，在法律法规框架下，都将全力支持</p>
+        <p>当前，中国已成为全球集成电路发展增速最快的地区之一。集成电路产业同时也是中国国民经济和社会发展的战略性、基础性和先导性产业，地位十分重要。</p>
+        <p>ASML公司是一家总部设在荷兰Veldhoven市的全球最大的集成电路设备制造商之一。该公司所生产的光刻机是生产集成电路过程必不可少的核心角色。目前该公司所产最尖端EUV（极紫外光）光刻机的加工极限已达到5纳米。美国苹果公司最新版iPhone12所搭载芯片即为在ASML支持下所产5纳米芯片。</p>
+    </div>
+</body>
+</html>

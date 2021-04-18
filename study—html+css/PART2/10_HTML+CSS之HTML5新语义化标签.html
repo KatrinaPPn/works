@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5新语义化标签</title>
+</head>
+<body>
+    <header>
+        <hgroup>
+            <h1>主标题</h1>
+            <h2>副标题</h2> 
+            <nav>
+                <ul>
+                    <li>首页</li>
+                    <li>论坛</li>
+                    <li>关于</li>
+                </ul>
+            </nav>
+    </header>
+    <main>
+        <article>
+            <section>
+                <!-- datalist使用方法：在input标签内使用list属性（自定义一个名字），在datalist标签内使用id属性（使用前面要关联的list值）将datalist与列表联系起来 。  option标签里面写列表项值。   这就会根据用户属于自动提醒类型的值-->
+                <input type="text" list="elems">
+                <datalist id="elems">
+                    <option value="apple"></option>
+                    <option value="age"></option>
+                    <option value="around"></option>
+                    <option value="about"></option>
+                </datalist>
+
+                <!-- details用于标题内容与详细内容的展示设置 -->
+                <details>
+                    <summary>HTML</summary>
+                    <p>超文本标记语言</p>
+                </details>
+
+                <p>进度条</p>
+                <progress min="0" max="10" value="8"></progress>
+                <p>度量范围</p>
+                <meter min="0" max="100" value="70" low="10" high="60"></meter>
+            </section>
+            <section>
+                <ul>
+                    <li>
+                        <figure>
+                            <img src="../img/youku.jpg" alt="">
+                            <figcaption>
+                                太古神王💗帅爆了
+                                <br>
+                                替夫出战！莫倾城决战君临
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="../img/youku.jpg" alt="">
+                            <figcaption>
+                                太古神王💗帅爆了
+                                <br>
+                                替夫出战！莫倾城决战君临
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </section>
+            <section></section>
+        </article>
+        <aside></aside>
+    </main>
+    <footer></footer>
+</body>
+</html>

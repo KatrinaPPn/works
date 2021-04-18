@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map与area</title>
+</head>
+<body>
+    <!-- 给图片中的特殊图形添加热区，需要在img标签中使用usemap属性，并且自定义一个热区名（要与map中name属性自定义的名字一致）用于定位热区 -->
+    <img src="../img/star.jpg" alt="" usemap="#star">
+    <map name="star">
+        <!-- <area shape="rect" coords="119 240 271 332" href="https://www.taobao.com" alt=""> -->
+        <!-- <area shape="circle" coords="306 275 40" href="https://www.taobao.com" alt=""> -->
+        <area shape="poly" coords="365 94 401 202 483 207 426 273 459 366 370 319 229 418 300 273 186 186 325 200" href="https://www.taobao.com" alt="">
+    </map>
+</body>
+</html>

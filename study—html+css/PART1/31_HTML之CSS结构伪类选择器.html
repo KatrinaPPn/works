@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML之CSS结构伪类选择器</title>
+        <style>
+            /* 第一行li适用 */
+            /* li:nth-of-type(1){background:red;} */
+            /* 0-n行li都适用 */
+            /* li:nth-of-type(n){background:red;} */
+            /* 奇数行 */
+            /* li:nth-of-type(2n+1){background:red;} */
+            /* 偶数行 */
+            /* li:nth-of-type(2n){background:red;} */
+
+            /* 第3个li标签会变红，即第3个li标签 */
+            /* li:nth-of-type(3){background:red;} */
+            /* 第3个孩子会变绿，即第2个li标签 */
+            /* li:nth-child(3){background:green;} */
+
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li></li>
+            <div>aaaaaaa</div>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </body>
+</html>

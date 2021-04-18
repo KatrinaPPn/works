@@ -1,0 +1,83 @@
+*{ margin: 0; padding: 0;}
+a{ text-decoration: none; font-weight: bold; color: black;}
+a:hover{
+	color: orange;
+}
+#container{background: #F2F2F2;}
+#container .logo{ width: 100%; padding-left: 120px;}
+#container .center{
+	width: 1000px;
+	margin:0 auto;
+	background:#fff;
+	color:#000;
+	border-radius: 6px;
+}
+#container .center .user_info div{ 
+	width: 76px; 
+	height: 76px; 
+	border-radius: 50%; 
+	margin:45px auto; 
+	border: 3px #a3a1a1 solid ; 
+	box-sizing: border-box; 
+	overflow: hidden;
+}
+#container .center p{
+	height: 40px;
+	line-height: 40px;
+	font-weight: bold;
+	font-size: 20px;
+	padding: 20px 80px 10px ;
+}
+#container .center .line{
+	width: 840px;
+	height: 2px;
+	margin: auto;
+	background: #a3a1a1;
+}
+#container .center .user_info img{ 
+	width: 100%; 
+	height: 100%; 
+}
+#container .center .info_input{
+	width: 840px;
+	/*margin: 0 auto;*/
+	margin: 0 130px;
+}
+#container .center .table_box{
+	margin: 0 130px;
+	/*margin: auto;*/
+	font-family:16px Times New Roman;
+}
+#container .center .table_box tr{
+	display: block;
+	width: 100%;
+	padding: 5px 0;
+}
+#container .center .table_box .text_box{
+	display: inline-block;
+	width: 350px;
+	line-height: 28px;
+	font-size: 16px;
+	border:1px solid #ccc;
+	padding: 4px 10px;
+}
+#container .center .table_box span{
+	font-size: 14px;
+	padding-left: 20px;
+	color: red;
+}
+#container .center .info_input .submit_input{
+	border:none;
+	border-radius: 5px;
+	width: 150px;
+	height: 40px;
+	margin: 35px;
+	background: #a3a1a1;
+	color: #fff; 
+	font-size: 20px;
+	cursor:pointer;
+}
+#container .center .table_box .submit_input:hover{
+	border:1px solid #ccc;
+	background: #333030;
+}

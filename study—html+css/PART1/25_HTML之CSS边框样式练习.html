@@ -1,0 +1,30 @@
+<!-- 需求：利用边框实现三角形 -->
+<!-- 由于边框拐角处是以拼接的形式处理的，当边框的宽和高做小时就会出现三角形的效果，保留一个边，其他设置为透明色即可 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>边框样式练习</title>
+        <style>
+            body{ background-color:violet; }
+            div{ 
+                width:0px; height:0px; 
+                border-top-color:transparent; 
+                border-top-style:solid; 
+                border-top-width:30px; 
+                border-bottom-color:red ; 
+                border-bottom-style:solid; 
+                border-bottom-width:30px;
+                border-left-color:transparent; 
+                border-left-style:solid; 
+                border-left-width:30px;
+                border-right-color:transparent; 
+                border-right-style:solid; 
+                border-right-width:30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>

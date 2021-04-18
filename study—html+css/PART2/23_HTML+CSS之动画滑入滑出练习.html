@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滑入滑出练习</title>
+    <style>
+        *{ margin: 0; padding: 0;}
+        ul{ list-style: none ;}
+        ul{ width: 150px; margin: 30px auto;}
+        /* 利用定位让图片居中 */
+        ul li{ width: 50px; height: 50px; float: left; position: relative;}
+        /* 利用margin将图片的可选范围扩大，使得鼠标不用对准图片才算被选中 */
+        ul li img{ position: absolute; left: 50%; top: 50%; margin: -10px 0 0 -11px;}
+
+        ul li:hover img{ 
+            animation: move .5s;
+        }
+        @keyframes move{
+            0%{ transform: translate(0,0); opacity: 1;}
+            60%{ transform: translate(0,-50px); opacity: 0;}
+            61%{ transform: translate(0,50px); opacity: 0;}
+            100%{ transform: translate(0,0); opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><img src="../img/1.png" alt=""></li>
+        <li><img src="../img/2.png" alt=""></li>
+        <li><img src="../img/3.png" alt=""></li>
+    </ul>
+</body>
+</html>

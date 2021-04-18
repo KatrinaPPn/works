@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>float小练习</title>
+        <style>
+            /* 清理默认设置  */
+            *{ margin: 0; padding: 0; }
+            ul{ list-style: none; }
+            img{ display: block; }
+            a{ text-decoration: none; }
+            h1,h2,h3{ font-size: 16px; }
+
+            .l{  float: left; }
+            .r{  float: right; }
+            .clear:after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            #main {
+                width: 1070px;
+                height: 948px;
+                margin: 20px auto;
+            }
+            #main h2{
+                color: #7a7576;
+                height: 60px;
+                line-height: 60px;
+                font-size: 22px;
+                padding-left: 64px;
+                border-top: 5px #0e6da2 solid;
+                border-left: 3px #e3e3e3 solid;
+                border-right: 3px #e3e3e3 solid;
+                border-bottom: 3px #e3e3e3 solid;
+        
+            }
+            #lis{
+                border-bottom: 2px #e9e9e9 solid;
+                padding-bottom: 10px;
+
+            }
+            #lis h2{
+                color: black;
+                height: 84px;
+                line-height: 84px;
+                font-size: 24px;
+                padding-left: 0;
+                border:none;
+                
+            }
+            .content{
+                margin-left: 22px;
+            }
+            .content p{
+                height: 36px;
+                line-height: 36px;
+                font-size: 20px;
+                color: #797679;
+            }
+            #lis span{
+                height: 60px;
+                line-height: 60px;
+                font-size: 20px;
+                color: #797679;
+                
+
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div id="main">
+             <h2>外媒评论精选</h2>
+             <ul >
+                 <li id="lis" class="clear">
+                     <h2>王景春斥《复联4》排片</h2>
+                     <div class="l pic">
+                        <a href="#">
+                            <img src="../img/movie-1.jpg" alt="">
+                        </a>
+                     </div>
+                     <div class="l content">
+                         <p>什么类型的电影获得什么样的排片率，是市场规律决定的，而不是电影人可逆向操作的...<a href="#">[详细]</a></p>
+                     </div>
+                     <div  class="clear"></div>
+                     <span>2017年&nbsp;12月23日&nbsp;04：48&nbsp;&nbsp;&nbsp;妖猫传&nbsp;陈凯歌&nbsp;黄轩</span>
+                 </li>
+                 <li id="lis" class="clear" >
+                    <h2>电影《至暗时刻》上线</h2>
+                    <div class="l pic">
+                       <a href="#">
+                           <img src="../img/movie-2.jpg" alt="">
+                       </a>
+                    </div>
+                    <div class="l content">
+                        <p>他的表演依旧保持着往日的高水准，他从外表、表情、动作到心理、性格、情绪等...<a href="#">[详细]
+                        </a></p>
+                    </div>
+                    <div  class="clear"></div>
+                    <span>2017年&nbsp;12月23日&nbsp;04：48&nbsp;&nbsp;&nbsp;妖猫传&nbsp;陈凯歌&nbsp;黄轩</span>
+                </li>
+                <li id="lis" class="clear">
+                    <h2>评论《妖猫传》美得让你忽视一些瑕疵</h2>
+                    <div class="l pic">
+                       <a href="#">
+                           <img src="../img/movie-3.jpg" alt="">
+                       </a>
+                    </div>
+                    <div class="l content">
+                        <p>一众演员在陈凯歌的执导下，很好地完成了这出充满执念的唐朝凄美爱情故事...<a href="#">[详细]</a></p>
+                    </div>
+                    <div  class="clear"></div>
+                    <span>2017年&nbsp;12月23日&nbsp;04：48&nbsp;&nbsp;&nbsp;妖猫传&nbsp;陈凯歌&nbsp;黄轩</span>
+                </li>
+             </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML之CSS标签分类</title>
+        <style>
+            /* #box1, #box2{width: 100px; height: 100px; background: burlywood;} */
+            /* 宽高不会起作用，宽高有文字决定 */
+            #content1, #content2{width: 100px; height: 100px; background: burlywood;}
+
+            /* 若要去掉标签之间的缝隙，要在内联所在的父标签里面设置如下： 方法一*/
+            /* body{ font-size: 0;}
+            #content1, #content2{width: 100px; height: 100px; background: burlywood; font-size: 16px;} */
+        </style>
+    
+    </head>
+
+    <body>
+
+        <!-- 块 -->
+        <!-- <div id="box1">this is a box </div>
+        <div id="box2">this is another box </div> -->
+
+        <!-- 内联 -->
+        <!-- 因为换行，标签之间会有缝隙 -->
+        <!-- <span id="content1">inline1inline1inline1inline1inline1inline1inline1</span>
+        <span id="content2">inline2</span> -->
+        <!-- 若要去掉标签之间的缝隙，要在内联所在的父标签里面设置如下： 方法二：不换行 -->
+        <span id="content1">inline1inline1inline1inline1inline1inline1inline1</span><span id="content2">inline2</span>
+
+
+    </body>
+</html>

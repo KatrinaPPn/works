@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字注解与文字排列</title>
+    <style>
+        span{
+            direction: rtl;
+            unicode-bidi: bidi-override;
+        }
+    </style>
+</head>
+<body>
+    <ruby>
+        寒<rt>han</rt>冬
+    </ruby>
+    <p>
+        爱因斯坦<br>
+        <bdo dir="rtl">爱因斯坦</bdo>
+    </p>
+    <p>
+        <span>爱因斯坦</span>
+    </p>
+</body>
+</html>

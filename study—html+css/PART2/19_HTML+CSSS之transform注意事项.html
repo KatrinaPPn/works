@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform注意事项</title>
+    <style>
+
+        .box1{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background: red;
+            /* 先执行scale缩小二分之一，然后位移100px */
+            transform: translate(100px,0) scale(.5);
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background: red;
+            /* 先执行translate移动50px（因为translate会受到scale影响，所以移动距离会由原来的100px缩小至二分之一（即50px）），然后缩小0.5倍 */
+            transform: scale(.5) translate(100px,0);
+        }
+
+        .box4{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+        .box5{
+            width: 100px;
+            height: 100px;
+            background: red;
+            /* 先执行rotate旋转45°，然后位移100px */
+            transform: translate(100px,0) rotate(45deg);
+        }
+        .box6{
+            width: 100px;
+            height: 100px;
+            background: red;
+            /* 先执行translate向右下角（45°角）移动50px（因为translate会受到rotate影响，所以移动距离会由原来的100px缩小至二分之一（即50px）），然后缩小0.5倍 */
+            transform: rotate(45deg) translate(100px,0);
+        }
+
+        .box7{
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: 1s;
+            /* 设置基点位置：默认值是center center；可以写数值，也可以写right、left等；数值可以大于容器（在容器外部可以可以的，大于容器会先移动到基点再进行transform操作） */
+            transform-origin: 100px 100px ;
+        }
+        .box7:hover{
+            transform: scale(.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+    <hr>
+    <div class="box4">4</div>
+    <div class="box5">5</div>
+    <div class="box6">6</div>
+    <hr>
+    <br><br><br><br><br><br><br><br><br>
+    <div class="box7"></div>
+</body>
+</html>

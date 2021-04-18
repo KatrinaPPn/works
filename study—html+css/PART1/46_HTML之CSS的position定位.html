@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>相对定位</title>
+        <style>
+            /* #box1{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            } */
+            /* relative:不脱离文档流，不影响其他元素布局，left、top、right、bottom是相对于当前元素（即box2的左上角的原点）自身进行偏移的 */
+            /* #box2{
+                width: 100px;
+                height: 100px;
+                background-color: blue ;
+                position: relative;
+                left: 100px;
+                top: 100px;
+            }
+            #box3{
+                width: 100px;
+                height: 100px;
+                background-color: green;
+            } */
+
+
+            /* absolute:使元素完全脱离文档流(红色脱离文档流，所以blue上去了) */
+            /* #box1{width: 100px; height: 100px; background-color: red; position: absolute;}
+            #box2{width: 200px; height: 200px; background-color: blue;} */
+
+            /* absolute：使内联元素支持宽高（让内联（不支持宽高）具备块特性,即支持宽高）；使块元素默认宽根据内容决定（让块具备内联的特性） */
+            /* span{ width: 100px; height: 100px; background-color: red; position: absolute;}
+            #box1{ background-color: yellow; position: absolute;} */
+
+            /* absolute:如果有定位祖先元素相对于定位祖先元素发生偏移(box1左上角为原点，后续元素根据box1的左上角动)，没有定位祖先元素相对于整个文档发生偏移 */
+            /* #box1{ width:300px; height: 300px; border: 1px black solid; margin: 200px; position: absolute;}
+            #box2{ width: 100px; height: 100px; background-color: red; position:absolute;right: 0;top: 0;} */
+
+            /* fixed1 */
+            /* body{height: 2000px;}
+            div{ position: fixed; bottom: 0; right: 0;} */
+
+            /* fixed2:相对于整个浏览器窗口进行偏移（不会根据定位祖先元素进行偏移），不受浏览器滚动条的影响 */
+            /* body{ height: 2000px;}
+            #box1{ width: 300px; height: 300px; border: 1px black solid ; margin: 200px; position: relative;}
+            #box2{ width: 100px; height: 100px; background-color: red; position: fixed; left: 0; top: 0;} */
+
+            /* sticky: 黏性定位，top决定黏住的位置 */
+            /* body{height: 2000px;}
+            div{ background-color:red ; position:sticky; top: 100px;} */
+
+            /* z-index: 正常情况后写的box2会在box1上面，但是z-index(也可以是负数)会改变放置顺序 */
+            /* #box1{ width: 100px; height: 100px; background-color: red; position: absolute; z-index: 1;}
+            #box2{ width: 100px; height: 100px; background-color: blue ; position: absolute; left:50px; top:50px; } */
+
+            /* parent不写position时，box1跟box2会直接比较，谁优先级别高的在前面，红色盒子会在蓝色盒子前面 */
+            /* #parent{ width: 100px; height: 100px; border: 1px black solid;}
+            #box1{ width: 100px; height: 100px; background-color: red; position: absolute; z-index: 0;}
+            #box2{ width: 100px; height: 100px; background-color: blue ; position: absolute; left:50px; top:50px; z-index: -1;} */
+            /* parent写position时，是parent跟box2先进比较，谁优先级别高的在前面，然后parent再去跟box1比较，决定排序（蓝色盒子会在红色盒子前面 */
+            #parent{ width: 100px; height: 100px; border: 1px black solid; position: absolute; z-index:-2}
+            #box1{ width: 100px; height: 100px; background-color: red; position: absolute; left:20px; top:20px;z-index: 0;}
+            #box2{ width: 100px; height: 100px; background-color: blue ; position: absolute; left:50px; top:50px; z-index: -1;} 
+        </style>
+    </head>
+    <body>
+        <!-- relative -->
+        <!-- <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div> -->
+
+        <!-- absolute1 -->
+        <!-- <div id="box1"></div>
+        <div id="box2"></div> -->
+
+        <!-- absolute2 -->
+        <!-- <span>这是个内联</span>
+        <div id="box1">这是一个块</div> -->
+        
+        <!-- absolute3 -->
+        <!-- <div id="box1">
+            <div id="box2"></div>
+        </div> -->
+
+        <!-- fixed1 -->
+        <!-- <div>这是一个块</div> -->
+
+        <!-- fixed2 -->
+        <!-- <div id="box1">
+            <div id="box2"></div>
+        </div> -->
+
+        <!-- sticky黏性定位 -->
+        <!-- <p>aaaaa</p>
+        <p>aaaaa</p>
+        <p>aaaaa</p>
+        <p>aaaaa</p>
+        <p>aaaaa</p>
+        <p>aaaaa</p>
+        <p>aaaaa</p>
+        <p>aaaaa</p>
+        <p>aaaaa</p>
+        <p>aaaaa</p>
+        <div>this is a block</div>
+        <p>aaaaa</p>
+        <p>aaaaa</p>
+        <p>aaaaa</p>
+        <p>aaaaa</p>
+        <p>aaaaa</p>
+        <p>aaaaa</p>
+        <p>aaaaa</p>
+        <p>aaaaa</p>
+        <p>aaaaa</p>
+        <p>aaaaa</p> -->
+
+        <!-- z-index -->
+        <!-- <div id="box1"></div>
+        <div id="box2"></div> -->
+        <!-- 嵌套式需要注意 -->
+        <div id="parent">
+            <div id="box1"></div>
+        </div>
+        <div id="box2"></div>
+    </body>
+</html>

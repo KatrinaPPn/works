@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>float浮动</title>
+        <style>
+            body{ border:1px black solid;}
+            /* 未加浮动，块元素自占一行 */
+            /* #box1{ width: 100px; height: 100px; background: yellow;}
+            #box2{ width: 200px; height: 200px; background: red;} */
+            /* 加浮动1：box1浮起来，在box2上方 */
+            /* #box1{ width: 100px; height: 100px; background: yellow; float: left;}
+            #box2{ width: 200px; height: 200px; background: red; }  */
+            /* 加浮动2：box2会挨着前面的浮动盒子box1排列 */
+            /* #box1{ width: 100px; height: 100px; background: yellow; float: left;}
+            #box2{ width: 200px; height: 200px; background: red; float: left;}  */
+            /* 加浮动3： */
+            #box1{ width: 100px; height: 100px; background: yellow; float: left;}
+            #box2{ width: 200px; height: 200px; background: red; float: right;} 
+        </style>
+    </head>
+    <body>
+        <div id="box1"></div>
+        <div id="box2"></div>
+    </body>
+</html>

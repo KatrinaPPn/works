@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation拓展</title>
+    <style>
+        .box1, .box2, .box3, .box4{ width: 100px; height: 100px; background: royalblue; margin: 10px;}
+        /* 默认值none：在延迟时，动画0%会在延时后生效（所以在延迟1s后才会变蓝并移动） */
+        .box1{ animation: 3s move 1s; }
+        /* backwords：在延迟时，动画已经开始生效（所以在延迟的1s时已经变蓝） */
+        .box2{ animation: 3s move 1s; animation-fill-mode: backwards;}
+        /* forwards：在运动结束之后之后，停在结束位置 */
+        .box3{ animation: 3s move 1s; animation-fill-mode: forwards;}
+        /* both：同时具备backwards和forwards属性 */
+        .box4{ animation: 3s move 1s; animation-fill-mode: both;}
+
+        @keyframes move {
+            0%{ transform: translate(0,0); background: slateblue;}
+            100%{ transform: translate(300px, 0);}
+        }
+
+        /* alternate ： 一次正向（0% ~ 100%），一次反向（100% ~ 0%）
+        reverse ： 永远都是反向，从100% ~ 0%
+        normal : 默认值。永远都是正向，0% ~ 100% */
+        .box5{ width: 100px; height: 100px; background: red; animation: 1s mymove infinite; animation-direction: alternate;}
+        @keyframes mymove {
+            0%{ transform: translate(0,0); }
+            100%{ transform: translate(300px, 0);}
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <br><br><br>
+    <hr>
+    <div class="box5"></div>
+</body>
+</html>

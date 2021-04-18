@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D立方体</title>
+    <style>
+        *{ margin: 0; padding: 0;}
+        ul{ list-style: none;}
+        /* 一般都是最外层盒子放景深，动画那层的大盒子放transform-style，以及transition、transform-origin */
+        .box{ width: 300px; height: 300px; border: 1px black solid; margin: 30px auto ; perspective: 200px;}
+        .box ul{ width: 100px; height: 100px; margin: 100px; position: relative; transform-style: preserve-3d; transition: 2s;
+            transform-origin: center center -50px;
+        }
+        /* 可以看看不加transform-origin: center center -50px;的效果（图形会变形翻转） */
+        .box ul li{ width: 100px; height: 100px; line-height: 100px; text-align: center; color: blanchedalmond; font-size: 26px; position: absolute;}
+        .box ul li:nth-child(1){ background: crimson; left: 0; top: 0;}
+        .box ul li:nth-child(2){ background: darkgreen; left: 100px; top: 0; transform-origin: left; transform: rotateY(90deg);}
+        .box ul li:nth-child(3){ background:steelblue; left: -100px; top: 0; transform-origin: right; transform: rotateY(-90deg);}
+        .box ul li:nth-child(4){ background: violet; left: 0; top: -100px; transform-origin: bottom; transform: rotateX(90deg);}
+        .box ul li:nth-child(5){ background: darkkhaki; left: 0; top: 100px; transform-origin: top; transform: rotateX(-90deg);}
+        .box ul li:nth-child(6){ background: lightgray; transform: translateZ(-100px) rotateY(180deg);}
+
+        .box:hover ul{ transform: rotateY(360deg);}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML之CSS显示框类型</title>
+        <style>
+            /* div{ width:100px ; height: 100px; background:gray; display: inline;}
+            span{ width:100px ; height: 100px; background:gray; display: block;} */
+
+        /* display: none 与 visibility ： none 的区别：display: none   不占空间的隐藏;   visibility ： none    占空间的隐藏 */
+            #box1, #box2{width:100px; height: 100px; background:gray;}
+            #box1{ 
+                /* display:none; */
+                visibility:hidden;
+            }
+
+        </style>
+    
+    </head>
+
+    <body>
+        <!-- block -->
+        <!-- <div>box1</div>
+        <div>box2</div> -->
+
+        <!-- inline -->
+       <!-- <span>inline1</span>
+       <span>inline2</span> -->
+
+       <!-- display VS visibility -->
+       <div id="box1">box1</div>
+       <div id="box2">box2</div>
+
+    </body>
+</html>

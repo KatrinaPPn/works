@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>float的清除浮动</title>
+        <style>
+            /* 可以看前面的浮动元素是left还是right，clear就选择对应的值就可以清除，若选了相反值则不会产生清除效果；如不确定则用both */
+            /* #box1{ width: 100px; height: 100px; background: yellow; float: left;}
+            #box2{ width: 200px; height: 200px; background: red; clear: left;}  */
+            /* 若clear选了与前面的float相反的值则不会产生清除效果 */
+            /* #box1{ width: 100px; height: 100px; background: yellow; float: left;}
+            #box2{ width: 200px; height: 200px; background: red; clear: right;}  */
+
+            /* 嵌套清除(面试常问) */
+            /* 1.固定宽高：在父容器固定宽高，不推荐，不适合自适应页面 */
+            /* #box1{width: 200px; height:200px; border: 1px black solid; }
+            #box2{width: 100px; height: 200px; background: red; float: left;} */
+            /* 2.父元素浮动：不推荐，会影响后面的正常文档流的元素 */
+            /* #box1{width: 200px; border: 1px black solid; float: left;}
+            #box2{width: 100px; height: 200px; background:red; float: left;} */
+            /* 3.overflow ：hidden（BFC规范），不推荐，如果有子元素溢出，会被隐藏掉溢出部分，导致无法正常显示 */
+            /* #box1{width: 200px; border: 1px black solid; overflow: hidden;}
+            #box2{width: 100px; height: 200px; background:red; float: left;} */
+            /* 4.display ： inline-block（BFC规范），不推荐，父容器会影响到后面的元素 */
+            /* #box1{width: 200px; border: 1px black solid; display: inline-block;}
+            #box2{width: 100px; height: 200px; background:red; float: left;} */
+            /* 5.设置空标签 ：空标签请了浮动，与box2同大小，而空标签又与box1是同一个层次的文档流，父容器大小会与子容器一致，把父容器撑大。。但不推荐，会多添加一个标签 */
+            /* #box1{width: 200px; border: 1px black solid;}
+            #box2{width: 100px; height: 200px; background:red; float: left;} 
+            .clear{ clear:both; } */
+            /* after伪类 ： content加的是内联标签，clear对内联是不起作用的， 需要用display转成块元素，再通过clear属性清除浮动*/
+            #box1{width: 200px; border: 1px black solid;}
+            #box2{width: 100px; height: 200px; background:red; float: left;} 
+            .clear:after{ content: ''; clear:both; display: block;}
+        </style>
+    </head>
+    <body>
+        <!-- <div id="box1"></div>
+        <div id="box2"></div> -->
+
+        <!-- 嵌套清除 -->
+        <!-- <div id="box1">
+            <div id="box2"></div>
+            <div class="clear"></div>
+        </div>
+        aaaaaa -->
+        
+        <!-- after伪类 ： 推荐，目前各大公司的做法 -->
+        <div id="box1" class="clear">
+            <div id="box2"></div>
+        </div>
+        aaaaaaa
+
+    </body>
+</html>

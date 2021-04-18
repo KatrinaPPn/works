@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>圆角操作</title>
+        <style>
+            /* 一个值代表四个角都是 */
+            /* #box{ width: 200px; height: 200px; background: red; border-radius: 10px;} */
+            /* 当值等于容器一半会形成圆 */
+            /* #box{ width: 300px; height: 300px; background: red; border-radius: 50%;} */
+            /* 两个值代表：左上右下  右上左下 （对角线） */
+            /* #box{ width: 300px; height: 300px; background: red; border-radius: 10px 20px;} */
+            /* 四个值代表左上 右上 右下 左下 */
+            /* #box{ width: 300px; height: 300px; background: red; border-radius: 10px 20px 30px 40px;} */
+            /* 值/值表示与椭圆相切 */
+            /* #box{ width: 300px; height: 300px; background: red; border-radius: 20px / 40px;} */
+            /* 左上跟右上都等于宽的一半，然后高也取一半就可以得到半圆 */
+            #box{ width: 300px; height: 150px; background: red; border-radius: 150px 150px 0 0;}
+            
+        </style>
+    </head>
+    <body>
+        <div id="box"></div>
+    </body>
+</html>

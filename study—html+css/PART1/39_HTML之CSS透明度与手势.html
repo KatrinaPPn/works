@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML之CSS透明度与手势</title>
+        <style>
+            /* #div1{ width: 100px; height: 100px; background: red; opacity: 0;}  */
+            /* div里面所有的元素都会变成半透明 */
+            #div1{ width: 100px; height: 100px; background: red; opacity: 0.5;} 
+            /* #div1{ width: 100px; height: 100px; background: red; opacity: 1;}  */
+            /* div里面只有背景色变成半透明 */
+            #div2{ width: 100px; height: 100px; background: rgba(255, 0, 0, 0.5);
+                cursor:alias;
+            } 
+        </style>
+    
+    </head>
+
+    <body>
+        <div id="div1">this is a box</div>
+        <p>part1</p>
+        <div id="div2">this is another box</div>
+
+    </body>
+</html>

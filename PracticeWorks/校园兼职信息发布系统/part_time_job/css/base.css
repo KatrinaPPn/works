@@ -1,0 +1,93 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    background-size: cover;
+} 
+.table01
+{
+	text-align:center; 
+	width:100%;
+}
+.table01 .title{
+	font-size:20px;
+	text-align:left;
+	color:#138535;
+	border-bottom:1px solid #138535;
+}
+.table01 th{
+	text-align:center;
+	white-space:nowrap;
+}
+.table01 td{
+	border-bottom:1px solid #ccc;
+	font-size:14px;
+	height-line:24px;
+	color:#999;
+}
+
+ul{
+	list-style-type:none;
+}
+
+#nav{
+	width:100%;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	background-color:#FF6500;
+}
+
+#nav li{
+	float:left;
+}
+#nav a{
+	display:block;
+	background-color:#FF6500;
+	color:white;
+	width:120px;
+	text-align:center;
+	padding:4px 0px;
+	text-decoration:none;
+}
+
+#nav a:hover,a:active{
+	background-color:#FFC13E;
+
+}
+.job-menu{
+	border:1px solid gray;
+	border-radius:15px;
+	font-size:14px;
+	
+}
+.job-menu dd{
+	text-align: left;
+}
+.job-menu a{
+	color:black ;
+	line-height: 24px;
+	font-size:14px;
+	padding-left: 20px;
+	text-decoration: none;
+	
+}
+.job-menu a:hover{
+	color:#FFC13E;
+	font-size:14px;
+	padding-left: 20px;
+	text-decoration: none;
+
+}
+.btn-search{
+	background:#FF6500;
+	border-radius:5px;
+	color:#fff;
+	border:1px solid #fff;
+}
+.foot{
+	background:#FFC13E;
+	font-size:12px; 
+	padding:12px;margin-top:20px;
+}

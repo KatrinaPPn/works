@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML之CSS继承</title>
+        <style>
+            /* 布局width、height、border不会被继承到p标签中，但文字color、font-size的样式会被继承到p标签中 */
+            div{width:300px; height:300px; border:1px red solid; color:red; font-size:30px;}
+            /* 设置inherit值可以实现继承 */
+            /* p{ border:inherit;} */
+        </style>
+
+    </head>
+    <body>
+        <div>
+            <p>this is a  world </p>
+        </div>
+    </body>
+</html>

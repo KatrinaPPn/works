@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition练习二</title>
+    <style>
+        ul,li{ margin: 0; padding: 0; list-style: none; }
+        ul{ 
+            width: 780px;
+            margin: 50px auto;
+        }
+        ul li{
+            width: 320px;
+            height: 100px;
+            float: left;
+            margin-top: 30px; 
+            margin-left: 30px;
+            padding: 0 2px;    
+        }
+        ul li .box{
+            width: 120px;
+            border-top: #2f80ed 2px solid ;
+            transition: .5s;
+        }
+        ul li h3{
+            font-size: 16px;
+            font-weight: normal;
+            font-family: "微软雅黑";
+            width: 320px;
+            line-height: 22px;
+            color: black;
+        }
+        ul li p{
+            font-size: 14px;
+            color: gray;
+        }
+        ul li a{
+            width: 320px;
+            height: 100px;
+            color: black;
+            text-decoration: none;
+        }
+        ul li h3:hover{
+            color:#2f80ed;
+        }
+        ul li .box:hover{
+            width: 220px;
+            border-top: #2f80ed 2px solid ;
+        }
+        
+    </style>
+</head>
+<body>
+    <ul><a href="#">
+        <li>
+            <div class="box">
+                <h3>广西宏桂集团党委书记、董事长何有成一行9人到访我校</h3>
+            </div>
+            <p>2020.10.16 / 交流合作</p>
+            
+        </li></a>
+        <li><a href="#">
+            <div class="box">
+                <h3>大连东软信息学院2020级新生开学典礼隆重举行</h3>
+            </div>
+            <p>2020.10.10 / 学校新闻</p>
+            </a>
+        </li>
+        <li><a href="#">
+            <div class="box">
+                <h3>大连东软信息学院学校党委书记、校长温涛教授在2020级新生开学典礼上的讲话</h3>
+            </div>
+            <p>2020.10.10 / 学校新闻</p>
+            </a>    
+        </li>
+        <li><a href="#">
+            <div class="box">
+                <h3>东北大学原校长赫冀成、原副校长王宛山一行2人到访我校</h3>
+            </div>
+            <p>2020.09.30 / 学校新闻</p>
+            </a>
+        </li>
+        <li><a href="#">
+            <div class="box">
+                <h3>我校受邀参加全国高校（在连）校友会团体接力赛</h3>
+            </div>
+            <p>2020.09.30 / 学校新闻</p>
+            </a>
+        </li>
+        <li><a href="#">
+            <div class="box">
+                <h3>【双秩风华，妙笔献礼】大东软——梦开始的地方</h3>
+            </div>
+            <p>2020.10.05 / 学校新闻</p>
+            </a>
+        </li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>表格标签</title>
+        <style>
+            table{ 
+                /* 隐藏空单元格（单线状态下基本无差别，双线才能看出来） */
+                empty-cells: hide;
+                /* 添加单线 */
+                border-collapse: collapse;
+            }
+            /* 一定要加定位 */
+            table .line{
+                border-top: 50px solid red;
+                border-left: 150px solid blue;
+                position: relative;
+                color: white;
+            }
+            table .line em{
+                position: absolute;
+                left: -60px;
+                top: -40px;
+                font-style: normal;
+            }
+            table .line span{
+                position: absolute;
+                left: -120px;
+                top: -30px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <!-- 添加表格属性的表格 -->
+        <!-- 定义表格的边框、单元格内的空间、单元格之间的空间 -->
+        <table border="1"> 
+            <capiton>天气预报</capiton>
+            <!-- 列分组 -->
+            <colgroup>
+                <!-- col标签代表列，span属性代表某几列 -->
+                <col span="2" style="background-color: violet;">
+                <col span="2" style="background-color:tomato;">
+            </colgroup>
+            <tHead>
+                <tr>
+                    <!-- 合并列 -->
+                    <th colspan="2">
+                        <div class="line">
+                            <em>详细</em>
+                            <span>日期</span>
+                        </div> 
+                    </th>
+                    <th>天气情况</th>
+                    <th>出行情况</th>
+                </tr>
+            </tHead>
+            <tBody>
+                <tr>
+                    <!-- 合并行 -->
+                    <td rowspan="2">2020年1月1日</td>
+                    <td>白天</td>
+                    <td><img src="../img/晴天（白天） .png"></td>
+                    <td>天气晴朗，宜出门</td>
+                </tr>
+                <tr>
+                    <td>晚上</td>
+                    <td><img src="../img/晴天（白天） .png" alt=""></td>
+                    <td>天气晴朗，宜出门</td>
+                </tr>
+                <tr>
+                     <!-- 合并行 -->
+                    <td rowspan="2">2020年1月2日</td>
+                    <td>白天</td>
+                    <td><img src="../img/大雨.png"></td>
+                    <td>大雨，出门请带雨伞</td>
+                </tr>
+                <tr>
+                    <td>晚上</td>
+                    <td><img src="../img/大雨.png" alt=""></td>
+                    <td></td>
+                </tr>
+            </tBody>
+            <tFood>
+                <!-- 一般常用于需要统计的表格 -->
+            </tFood>
+        </table>
+    </body>
+</html>

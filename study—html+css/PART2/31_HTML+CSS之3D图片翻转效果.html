@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d图片翻转</title>
+    <style>
+        *{ margin: 0; padding: 0;}
+        img{ display: block;}
+        .parent{ width: 1200px; height: 675px; margin: 30px auto ; position: relative; perspective: 1500px;}
+        .parent div{ width: 100%; height: 100%; position: absolute; left: 0; top: 0; transition: .5s; backface-visibility: hidden;}
+
+        .parent div:first-child{ transform: rotateY(0);}
+        .parent div:last-child{ transform: rotateY(-180deg);}
+
+        .parent:hover div:first-child{ transform: rotateY(180deg);}
+        .parent:hover div:last-child{ transform: rotateY(0);}
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div>
+            <img src="../img/背景图1.jpg" alt="">
+        </div>
+        <div>
+            <img src="../img/背景图3.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

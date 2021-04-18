@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旋转木马</title>
+    <style>
+        *{ margin: 0; padding: 0;}
+        ul{ list-style: none;}
+        img{ display: block; width: 329px; height: 493px;}
+        .parent{ width: 1700px; height: 800px; border: 1px black solid; margin: 100px auto; perspective: 2500px;}
+        .parent ul{ width: 329px; height: 493px; margin: 150px auto; position: relative; transform-style: preserve-3d; transition: 4s;}
+        .parent ul li{ width: 100%; height: 100%; position: absolute; left: 0; top: 0; margin: 0 30px ;}
+
+        .parent ul li:nth-child(1){ transform: rotateY(0) translateZ(500px);}
+        .parent ul li:nth-child(2){ transform: rotateY(60deg) translateZ(500px);}
+        .parent ul li:nth-child(3){ transform: rotateY(120deg) translateZ(500px);}
+        .parent ul li:nth-child(4){ transform: rotateY(180deg) translateZ(500px);}
+        .parent ul li:nth-child(5){ transform: rotateY(240deg) translateZ(500px);}
+        .parent ul li:nth-child(6){ transform: rotateY(300deg) translateZ(500px);}
+
+        .parent:hover ul{ transform: rotateY(360deg);}
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <ul>
+            <li><img src="../img/灯1.jpg" alt=""></li>
+            <li><img src="../img/灯2.jpg" alt=""></li>
+            <li><img src="../img/灯3.jpg" alt=""></li>
+            <li><img src="../img/灯4.jpg" alt=""></li>
+            <li><img src="../img/灯5.jpg" alt=""></li>
+            <li><img src="../img/灯6.jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>

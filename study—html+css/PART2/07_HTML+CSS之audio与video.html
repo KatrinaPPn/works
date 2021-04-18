@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>audio与video</title>
+</head>
+<body>
+    <!-- loop表示循环播放、autoplay表示自动播放，audio跟video都具有这两个属性 -->
+    <!-- <audio src="../img/小鹿Morning - 大笨钟 (原唱_ 周杰伦).mp3" controls loop autoplay></audio> -->
+    <!-- <video src="../img/Taylor Swift-Blank Space (第58届格莱美提名歌曲)(超清).mp4" controls ></video> -->
+    
+    <!-- 设置备选播放方案：第一个source失败则选择第二个source资源，如此类推 -->
+    <!-- <video>
+        <source src="">
+        <source src="">
+    </video> -->
+
+    <!-- 模仿大连东软信息学院的视频（半显示状态），通过父容器的高度固定死，且overflow: hidden; 然后在video容器中设置样式，min-width: 100%; min-height: 100%; 就可以实现 -->
+    <div style="position: relative; height: 400px; overflow: hidden;">
+        <video  style="min-width: 100%; min-height: 100%;" loop="" playsinline="true" webkit-playsinline="true" x-webkit-airplay="true" x5-video-player-fullscreen="false" x5-video-player-type="h5" id="introvideo" autoplay="">
+            <source src="http://shimmer.neusoft.edu.cn/h/www/media/intro2016.mp4" type="video/mp4">
+            <source src="http://shimmer.neusoft.edu.cn/h/www/media/intro2016.webm" type="video/webm">
+        </video>
+    </div>
+</body>
+</html>

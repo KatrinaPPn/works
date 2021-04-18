@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML之CSS盒子模型嵌套练习</title>
+        <style>
+            /* padding实现 */
+            /* #box1{
+                width:350px;
+                height: 350px;
+                border:1px black dotted; 
+                padding:27px
+            }
+            #box2{
+                border:5px #d7effe solid;
+                padding:20px; 
+            }
+            #box3{
+                background: #ffa0df;
+                padding:41px;
+            }
+            #box4{
+                border:1px white dotted; 
+                padding:1px;
+            }
+            #box5{
+                border: 1px white dotted;
+                padding:49px;
+            }
+            #box6{
+                width: 100px;
+                height: 100px;
+                border: #fcff00 5px solid;
+                background: #96ff38;
+            } */
+
+            /* margin设置,原理是这鸭子,但是具体数值要去量一下 */
+            #box1{
+                width:350px;
+                height: 350px;
+                border:1px black dotted; 
+            }
+            #box2{
+                width:286px;
+                height: 286px;
+                border:5px #d7effe solid;
+                margin:27px;
+                
+            }
+            #box3{
+                width:245px;
+                height: 245px;
+                background: #ffa0df;
+                border:1px #ffa0df solid;
+                margin:20px; 
+                
+            }
+            #box4{
+                width:164px;
+                height: 164px;
+                border:1px white dotted; 
+                margin:41px;
+                
+            }
+            #box5{
+                width:160px;
+                height: 160px;
+                border: 1px white dotted;
+                margin:1px;
+                
+            }
+            #box6{
+                width: 52px;
+                height: 52px;
+                margin:49px;
+                border: #fcff00 5px solid;
+                background: #96ff38;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box1">
+            <div id="box2">
+                <div id="box3">
+                    <div id="box4">
+                        <div id="box5">
+                            <div id="box6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

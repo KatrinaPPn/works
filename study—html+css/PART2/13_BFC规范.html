@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFC规范</title>
+    <style>
+
+        /* BEC规范可以解决margin叠加问题（即不再是选其中最大的，而是可以实现将两个margin进行累加） */
+        .box{ display: flex;}
+        .div1{
+            width: 100px;
+            height: 100px;
+            background: red;
+            margin-bottom: 20px;
+        }
+        .div2{
+            width: 100px;
+            height: 100px;
+            background:blue;
+            margin-top: 30px;
+        }
+
+        /* margin传递问题 */
+        .div3{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+        .div4{
+            width: 100px;
+            height: 100px;
+            background:blue;
+            margin-top: 30px;
+        }
+        /* 在父容器加BFC规范 ，overflow可以触发BFC规范*/
+        .div5{
+            width: 200px;
+            height: 200px;
+            background: red;
+            overflow: hidden;
+        }
+        .div6{
+            width: 100px;
+            height: 100px;
+            background:blue;
+            margin-top: 30px;
+        }
+
+        /* margin浮动问题 */
+        .div7{
+            width: 200px;
+            border: 1px black solid;
+        }
+        .div8{
+            width: 100px;
+            height: 100px;
+            background:blue;
+            float: left;
+        }
+
+        .div9{
+            width: 200px;
+            border: 1px black solid;
+            overflow: hidden;
+            /* 设置浮动或者内联块类型也可以解决此问题 */
+            /* float:left;
+            display: inline-block; */
+        }
+        .div10{
+            width: 100px;
+            height: 100px;
+            background:blue;
+            float: left;
+        }
+
+
+        /* margin重叠问题 */
+        .div11{
+            width: 100px;
+            height: 100px;
+            background: red;
+            float: left;
+        }
+        .div12{
+            height: 400px;
+            background: blue;
+        }
+        .div13{
+            width: 100px;
+            height: 100px;
+            background: red;
+            float: left;
+        }
+        .div14{
+            height: 400px;
+            background: blue;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <p>1.margin叠加问题</p>
+    <p>触发BFC规范时</p>
+    <div class="box">
+        <div class="div1"></div>
+    </div>
+    <div class="box">
+        <div class="div2"></div>
+    </div>
+
+    <p>没有触发BFC规范时，会将两个margin进行比较选最大的进行渲染</p>
+    <div>
+        <div class="div1"></div>
+    </div>
+    <div>
+        <div class="div2"></div>
+    </div>
+
+    <p>2.margin传递问题</p>
+    <p>没有触发BFC规范时，蓝色盒子的margin-top会影响其父容器（红色盒子），导致一起向下移动</p>
+    <hr>
+    <div class="div3">
+        <div class="div4"></div>
+    </div>
+    <p>触发BFC规范时，蓝色盒子的margin-top不会影响其父容器（红色盒子），只自己移动</p>
+    <hr>
+    <div class="div5">
+        <div class="div6"></div>
+    </div>
+
+    <p>3.margin浮动问题</p>
+    <p>没有触发BFC规范时，蓝色盒子的flow会影响外界的黑边盒子（蓝色盒子浮起来之和，因为脱离文档流，黑边盒子因为没设置高度所以会瘪下去）</p>
+    <div class="div7">
+        <div class="div8"></div>
+    </div>
+    <br><br><br><br><br>
+    <p>触发BFC规范时（给父容器加BFC规则），蓝色盒子的flow不会影响外界的黑边盒子（该盒子带有BFC属性）</p>
+    <div class="div9">
+        <div class="div10"></div>
+    </div>
+    
+    <p>4.margin重叠问题</p>
+    <p>没有触发BFC规范时，红色盒子的flow会影响外界的蓝色盒子（红色浮起来使得蓝色内的文字处于半层，无法贴近原本盒子的边沿）</p>
+    <div class="div11"></div>
+    <div class="div12">AAAAAAAAAAAAAAAA</div>
+    <p>触发BFC规范时，红色盒子的flow不会影响外界的蓝色盒子（蓝色内的文字贴近原本盒子的边沿）。一般应用于做单列（多列）固定，单列（多列）自适应的界面，如后台管理系统界面</p>
+    <div class="div13"></div>
+    <div class="div14">AAAAAAAAAAAAAAAA</div>
+   
+</body>
+</html>

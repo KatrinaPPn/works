@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>translate变形</title>
+    <style>
+        /* transform移动 */
+        .box1{
+            width: 300px;
+            height: 300px;
+            border: black solid;
+            margin: 30px auto;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: 2s;
+        }
+        .box1:hover .box2{
+            /* 复合写法：沿着xy轴移动 */
+            /* transform: translate(100px,100px); */
+            /* 非复合写法：沿着x轴移动 */
+            transform: translateX(100px);
+        }
+
+        /* transform放缩 */
+        .box3{
+            width: 300px;
+            height: 300px;
+            border: black solid;
+            margin: 30px auto;
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: 2s;
+        }
+        .box3:hover .box4{
+            /* 复合写法：沿着xy轴放缩;若xy放大缩小比例一样可以写成transform：scale（2） */
+            transform: scale(2,3);
+            /* 非复合写法：沿着x轴移动 */
+            /* transform: scaleX(2); */
+        }
+
+        /* transform旋转 */
+        .box5{
+            width: 300px;
+            height: 300px;
+            border: black solid;
+            margin: 30px auto;
+        }
+        .box6{
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: 1s;
+        }
+        .box5:hover .box6{
+            transform: rotateZ(45deg);
+        }
+
+        /* transform斜切 */
+        .box7{
+            width: 300px;
+            height: 300px;
+            border: black solid;
+            margin: 30px auto;
+        }
+        .box8{
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: 1s;
+        }
+        .box7:hover .box8{
+            /* 复合写法 */
+            transform: skew(30deg, 30deg);
+            /* 非复合写法 */
+            transform: skewX(30deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+    <hr>
+    <div class="box3">
+        <div class="box4"></div>
+    </div>
+    <hr>
+    <div class="box5">
+        <div class="box6"></div>
+    </div>
+    <hr>
+    <div class="box7">
+        <div class="box8"></div>
+    </div>
+</body>
+</html>

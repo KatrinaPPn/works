@@ -1,0 +1,44 @@
+{
+  "id": "2186116",
+  "name": "mytest",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7865400",
+      "name": "草莓",
+      "font_class": "food-strawberry",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "7865411",
+      "name": "蛋糕",
+      "font_class": "food-cake",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "122689",
+      "name": "cart",
+      "font_class": "cart",
+      "unicode": "e698",
+      "unicode_decimal": 59032
+    },
+    {
+      "icon_id": "122709",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e6ac",
+      "unicode_decimal": 59052
+    },
+    {
+      "icon_id": "122714",
+      "name": "success",
+      "font_class": "success",
+      "unicode": "e6b1",
+      "unicode_decimal": 59057
+    }
+  ]
+}

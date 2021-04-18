@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IE常见BUG</title>
+    <style>
+        /* BUG1 ： opacity 在IE8及以下版本不识别 */
+        /* .box{ width:100px; height:100px; background:red; opacity:0.5;} */
+        /* 解决方案：添加filter:alpha(opacity=透明值)进行透明度设置 */
+        /* .box{ width:100px; height:100px; background:red; opacity:0.5; filter:alpha(opacity=50);} */
+    
+        /* BUG2 ： IE6下的双边距BUG，当块元素设置了浮动，并且设置了左外边距时就会出现两倍左外边距的显示bug */
+        /* 解决方案：针对IE6设置它的display清浮动，_display:inline */
+        /* .box{ float:left; width:100px; height:100px; background:red; margin-left: 50px; _display:inline;} */
+    
+        /* BUG3 ： IE6下的最小高度BUG （因为IE6下最小高为16px，当自定义高度小于16px时它还是会按照16px进行显示，导致bug出现） */
+        /* 解决方案：设置溢出隐藏overflow: hidden */
+        /* .box{ width:300px; height:3px; background:red; overflow: hidden;} */
+        
+        /* BUG4 ： img边框问题 （当设置了图片并给图片加了a标签就会出现图片外边有个边框的bug）  */
+        /* 解决方案：border设为none */
+        img{ border:none;}
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <a href="#">
+        <img src="https://img.alicdn.com/tfscom/i2/256691439/TB2wjP9bXgkyKJjSspfXXcj1XXa_!!256691439.jpg_180x180xzq90.jpg" alt="">
+    </a>
+</body>
+</html>

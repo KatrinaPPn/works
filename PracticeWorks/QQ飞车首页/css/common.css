@@ -1,0 +1,25 @@
+/* 清理默认样式 */
+*{ margin: 0; padding: 0;}
+ul,ol{ list-style: none;}
+img{ display: block;}
+a{ text-decoration: none;}
+h1,h2,h3{ font-size: 16px;}
+body{ font-family: Arial, '宋体';}
+
+/* 设置常用样式 */
+.l{ float:left; }
+.r{ float: right ;}
+.clear{ content: ''; display: block; clear: both ;}
+.container{ width: 980px; margin: 0 auto; position: relative;}
+.container-fluid{ width: 100%;}
+
+#header{ background: url(../img/head_bg.png) repeat-x}
+#header .container{ height: 41px;}
+#header .header_logo{ width: 220px; height: 41px; background: url(../img/ost-bg.png) no-repeat left -38px;}
+#header .header_logo a{ display: block; width: 100%; height: 100%; text-indent:-9999px; overflow: hidden;}
+#header .head_ad{ margin-left: 8px; margin-top: 1px;}
+#header .head_menu{ font-size: 12px; line-height: 18px;}
+#header .head_menu div{ height: 18px; margin-top: 11px; background: url(../img/ost-bg.png) no-repeat;}
+#header .head_menu .header_menu_czsh{ background-position: left -91px; margin-right: 26px; padding-left: 20px;}
+#header .head_menu .header_menu_top{ background-position: right -87px; padding-right: 17px;}
+

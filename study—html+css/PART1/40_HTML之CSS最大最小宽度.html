@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML之CSS最大最小宽度</title>
+        <style>
+            /* 超出最大高度部分会溢出 */
+            /* div{ width: 200px; max-height: 200px; border:1px red solid; } */
+            /* 超出最小值部分，框会自动扩大显示 */
+            /* div{ width: 200px; min-height: 200px; border:1px red solid; } */
+
+            /* box2的height百分比值会根据父容器box1的值进行换算，如果父容器没有设置高，则会无法显示 */
+            /* #box1{ width:200px; height: 200px; background:red;}
+            #box2{ width:200px; height: 80%; background:blue;} */
+            
+            /* 设置容器自动适应屏幕大小 */
+            html,body{width: 100%; height: 100%; }
+            #box1{width: 100%; height: 100%; background: red;}
+        </style>
+    
+    </head>
+
+    <body>
+        <!-- <div id="div1">
+            this is a box
+            this is a box
+            this is a box
+            this is a box
+            this is a box
+            this is a box
+            this is a box
+            this is a box
+            this is a box
+            this is a box
+            this is a box
+            this is a box
+            this is a box
+            this is a box
+            this is a box
+            this is a box
+            this is a box
+            this is a box
+            this is a box
+            this is a box
+            this is a box
+            this is a box
+            this is a box
+            this is a box
+            this is a box
+            this is a box
+            this is a box
+            this is a box
+        </div> -->
+        <div id="box1">
+            <!-- <div id="box2"></div> -->
+        </div>
+    </body>
+</html>

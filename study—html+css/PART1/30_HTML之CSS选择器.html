@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <mate charset="UFT-8">
+        <title>HTML之CSS选择器</title>
+        <style>
+            /* #div1{background:red}
+            #div2{background:blue} */
+
+            /* 3. 多个样式的时候，样式的优先级根据css决定，而不是class属性中的顺序   显示蓝色底 */
+            /* .box{background:red ;}
+            .content{font-size:30px; background: blue;} */
+            
+
+             /* 3. 多个样式的时候，样式的优先级根据css决定，而不是class属性中的顺序   显示红色底 */
+            /* .content{font-size:30px; background: blue;}
+            .box{background:red ;} */
+
+            /* 4.标签+类的写法: 可以实现对同一个class名的不同标签规定特殊的样式 */
+            /* p.box{background:pink;} */
+
+            /* 通配选择器 */
+            /* *{border:1px red solid;} */
+
+
+            /* 层次选择器 */
+            /* 1.后代 */
+            /* #list li{ border: 1px red solid;} */
+
+            /* 2.父子 */
+            /* #list2 > li{border:1px red  solid;} */
+
+            /* 3.兄弟:div下面的h2兄弟 */
+            /* div ~ h2{ background:rebeccapurple;} */
+
+            /* 4.相邻 */
+            /* div + h2{background :saddlebrown;} */
+
+
+            /* 属性选择器 */
+            /* div标签中含有class属性的都适用 */
+            /* div[class]{background:sandybrown;}  */
+            /* div标签中含有class属性,且属性值为box的适用 */
+            /* div[class=box]{background:sandybrown;}  */
+            /* div标签中含有class属性,且属性值包含了search(部分匹配)的适用 */
+            /* div[class*=search]{background:sandybrown;} */
+            /* div标签中含有clas和id属性的适用 */
+            /* div[class][id]{background:seagreen;} */
+
+            /* 伪类选择器 */
+            /* div{width:200px; height:200px; background:red;}
+            div:hover{background:blue;}
+            div:active{background:green;} */
+
+            /* a:link{ color:blue;}
+            a:visited{color:red;}
+            a:hover{color:chocolate;}
+            a:active{color:darkgreen;} */
+
+            /* div:after{content: "world"; color:red;} */
+
+            /* 表单的伪类 */
+            /* :checked{width:100px; height:100px;}
+            :disabled{width:100px;height:100px;}
+            :focus{background:rosybrown;} */
+        </style>
+    </head>
+    <body>
+        <!-- <div id="div1">this is a div box</div>
+        <div id="div2">this is anohter div box</div> -->
+
+        <!--1. class选择器是可以复用的 -->
+        <!-- <div class="box">this is a box</div>
+        <div class="box">this is another  box</div> -->
+
+        <!--2. 可以添加多个class样式 -->
+        <!-- <div class="box content">this is a box</div> -->
+
+        <!--3. 多个样式的时候，样式的优先级根据css决定，而不是class属性中的顺序 -->
+        <!-- <div class="box content ">this is a box</div> -->
+        
+        <!-- 4.标签+类的写法 -->
+        <!-- <div class="box">this is a div box</div>
+        <div class="box ">this is anohter div box</div>
+        <p class="box">this is a word</p> -->
+
+
+        <!-- 层次选择器 -->
+        <!-- 1. 后代选择器 M N{}-->
+        <!-- <ul id="list">
+            <li>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </li>
+            <li></li>
+            <li></li>
+        </ul> -->
+
+        <!-- 2.父子选择器 -->
+        <!-- <ol id="list2">
+            <li>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </li>
+            <li></li>
+            <li></li>
+        </ol> -->
+
+        <!-- 3.兄弟 -->
+        <!-- <h2>this is another title(颜色不会变,因为不在div下面)</h2>
+        <div>this is a box</div>
+        <p>this is a hahah</p>
+        <h2>this is a title</h2>
+        <h2>this is a title</h2> -->
+
+        <!--4. 相邻 -->
+        <!-- 因为div下面是p不是h2,即没有相邻的h2,所以无任何效果 -->
+        <!-- <h2>this is another title</h2>
+        <div>this is a box</div>
+        <p>this is a hahah</p>
+        <h2>this is a title</h2>
+        <h2>this is a title</h2> -->
+        <!-- 因为div下面是h2,所以奏效 -->
+        <!-- <h2>this is another title</h2>
+        <div>this is a box</div>
+        <h2>this is a title</h2>
+        <p>this is a hahah</p>
+        <h2>this is a title</h2> -->
+
+
+        <!-- 属性选择器 -->
+        <!-- <div>aaaaaa</div>
+        <div class="box" id="text">bbbbb</div>
+        <div class="search">cccccc</div>
+        <div class="search-buttom">dddd</div> -->
+        
+        <!-- 伪类选择器 -->
+        <!-- <div></div> -->
+        <!-- <a href="#">这是一个链接</a> -->
+            <!-- <div>hello </div> -->
+
+        <!-- 表单的伪类 -->
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox" disabled>
+        <input type="text">
+    </body>
+</html>

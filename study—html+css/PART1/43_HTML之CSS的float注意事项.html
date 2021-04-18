@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>float浮动的注意事项</title>
+        <style>
+            /* body{ border:1px black solid;} */
+            /* 只会影响后面的元素:不影响box1的结构，但是box3会被影响 */
+            /* #box1{ width: 100px; height: 100px; background: yellow;}
+            #box2{ width: 200px; height: 200px; background: red; float: left;} 
+            #box3{ width: 300px; height: 300px; background: blue;}  */
+            /* 默认宽根据内容决定:文字有多长，就有多宽。若没有float属性会跟父容器一样宽 */
+            /* #box4{background: green; float: left;} */
+
+            /* 当元素超过父容器的宽时会自动换行 */
+            ul{ margin: 0; padding: 0; list-style: none; width: 300px; height: 300px; border:1px black solid;}
+            li{ width:100px; height: 100px; background: red; border: 1px yellow solid; box-sizing: border-box; float: left;}
+            /* 当某一浮动元素高大于默认时（120px大于100px），的显示如下 */
+            /* li:nth-of-type(1){height: 120px; } */
+            /* 当某一浮动元素高小于默认时（80px小于100px），的显示如下，不会嵌进去 */
+            /* li:nth-of-type(2){height: 80px; } */
+            /* 当某一浮动元素宽小于默认时（80px小于100px），的显示如下 */
+            /* li:nth-of-type(1){width: 80px; } */
+            /* 当某一浮动元素宽大于默认时（120x大于100px），的显示如下，超出父容器宽会直接换行，不会溢出也不会折 */
+            /* li:nth-of-type(1){width: 120px; }  */
+            /* 给内联元素添加浮动的效果：（不加是挨着显示的） */
+            span:last-of-type{float: right;}
+        </style>
+    </head>
+    <body>
+        <!-- <div id="box1"></div>
+        <div id="box2"></div> -->
+        <!-- 内容默认提升半层：文字处于1.5层，不会被前面浮动的box2覆盖，会沿着box2显示。常用于做网页的图文混排效果 -->
+        <!-- <div id="box3">文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</div>
+        <div id="box4">这是一个没有宽度的块元素</div> -->
+
+
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        
+        <span>aaaa</span><span>bbbb</span>
+    </body>
+</html>

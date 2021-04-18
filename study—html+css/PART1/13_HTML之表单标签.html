@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>表单标签</title>
+    </head>
+    <body>
+        <!-- action提交地址 -->
+        <form action="http://www.baidu.com">  
+            <h2>输入框：</h2>
+            <!-- placeholder：当用户输入为空时显示提示信息，以便用户输入 -->
+            <input type="text" placeholder="请输入用户名">
+
+            <h2>密码框：</h2>
+            <input type="password" placeholder="请输入密码">
+
+            <h2>复选框：</h2>
+            <input type="checkbox" checked>苹果
+            <input type="checkbox" disabled>香蕉
+            <input type="checkbox">葡萄
+
+            <h2>单选框：</h2>
+            <!-- name="自定义属性值" ： 根据name值来组建同一组的单选元件 -->
+            <input type="radio" name="gender">男
+            <input type="radio" name="gender">女
+
+            <h2>单选框（扩大选择点击范围）</h2>
+            <!-- input标签与label标签组合使用实现对应映射关系，使用户无论点击单选框还是对应的文字都能实现有效选择，提升用户体验 -->
+            <!-- id属性与for属性形成一一对应的映射，其属性值要相同 -->
+            <input type="radio" name="gender" id="man"><label for="man">男</label>
+            <input type="radio" name="gender" id="women"><label for="women">女</label>
+
+            <h2>上传文件（单选一个文件）</h2>
+            <input type="file">
+
+            <h2>上传文件（实现拖选多个文件的操作）</h2>
+            <input type="file" multiple>
+
+            <h2>提交按钮和重置按钮</h2>
+            <input type="submit">
+            <input type="reset">
+
+            <h2>多行文本框</h2>
+            <textarea cols="30" rows="10"></textarea>
+
+            <h2>下拉菜单（只显示一个选项）</h2>
+            <select>
+                <!-- selected表示默认被选，disable表示禁止选择 -->
+                <!-- 一般默认显示第一个option值，若要改变默认显示，则在所需的option标签内添加selected -->
+                <option selected disabled>请选择</option>
+                <option>北京</option>
+                <option>上海</option>
+                <option>广州</option>
+            </select>
+
+            <h2>下拉菜单（显示多个选项）</h2>
+            <select size="2">
+                <option>beijing</option>
+                <option>shanghai</option>
+                <option>guangzhou</option>
+            </select>
+
+            <h2>下拉菜单（实现多选）</h2>
+            <select multiple>
+                <option>beijing</option>
+                <option>shanghai</option>
+                <option>guangzhou</option>
+            </select>
+        </form>
+    </body>
+</html>
+

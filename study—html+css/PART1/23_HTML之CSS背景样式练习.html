@@ -1,0 +1,192 @@
+<!-- 需求：利用滚动条移动方式实现视觉差网页 -->
+<!-- 关键在于background-attachment属性设置为fixed，实现背景图不随滚动条移动，容器随着滚动条移动，下一个容器逐渐移动覆盖上一个容器，达到视觉差效果 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>背景样式练习</title>
+        <style>
+            #div1{ width:1400px; height:800px; background-image:url(../img/背景图1.jpg); background-attachment: fixed;}
+            #div2{ width:1400px; height:800px; background-image:url(../img/背景图2.jpg); background-attachment: fixed;}
+            #div3{ width:1400px; height:800px; background-image:url(../img/背景图3.jpg); background-attachment: fixed;}
+            table{ background-color:white; }
+        </style>
+    </head>
+    <body>
+        <div id="div1">        <table border="1" cellpadding="5" align="center">
+            <tHead>
+                <tr>
+                    <th>班次名称</th>
+                    <th>科目</th>
+                    <th>授课内容</th>
+                    <th>增值服务</th>
+                    <th>课时</th>
+                    <th>价格</th>
+                    <th>试听</th>
+                    <th>购买</th>
+                </tr>
+            </tHead>
+            <tBody>
+                    <tr>
+                        <td  rowspan="3" align="center">真题精解班</td>
+                        <td align="center">行测*申论</td>
+                        <td align="center">全科历年真题解析</td>
+                        <td rowspan="3" align="center">课后赠2套模拟卷24小时以内答疑</td>
+                        <td align="center">48</td>
+                        <td align="center">1280元</td>
+                        <td><a href="http://www.baidu.com" target="_blank"><img src="../img/晴天（白天） .png" alt=""></a></td>
+                        <td><a href="http://www.baidu.com" target="_blank"><img src="../img/晴天（白天） .png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                        <td align="center">行测</td>
+                        <td align="center">行测历年真题解析</td>
+                        <td align="center">32</td>
+                        <td align="center">980元</td>
+                        <td><a href="http://www.baidu.com" target="_blank"><img src="../img/晴天（白天） .png" alt=""></a></td>
+                        <td><a href="http://www.baidu.com" target="_blank"><img src="../img/晴天（白天） .png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                        <td align="center">申论</td>
+                        <td align="center">申论历年真题解析</td>
+                        <td align="center">16</td>
+                        <td align="center">580元</td>
+                        <td><a href="http://www.baidu.com" target="_blank"><img src="../img/晴天（白天） .png" alt=""></a></td>
+                        <td><a href="http://www.baidu.com" target="_blank"><img src="../img/晴天（白天） .png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3" >高分技巧班</td>
+                        <td align="center">行测*申论</td>
+                        <td align="center">全科技巧强化</td>
+                        <td rowspan="3" align="center">入学试卷测评24小时内答疑</td>
+                        <td align="center">32</td>
+                        <td align="center">980元</td>
+                        <td><a href="http://www.baidu.com" target="_blank"><img src="../img/晴天（白天） .png" alt=""></a></td>
+                        <td><a href="http://www.baidu.com" target="_blank"><img src="../img/晴天（白天） .png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                        <td align="center">行测</td>
+                        <td align="center">行测历年真题解析</td>
+                        <td align="center">32</td>
+                        <td align="center">680元</td>
+                        <td><a href="http://www.baidu.com" target="_blank"><img src="../img/晴天（白天） .png" alt=""></a></td>
+                        <td><a href="http://www.baidu.com" target="_blank"><img src="../img/晴天（白天） .png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                        <td align="center">申论</td>
+                        <td align="center">申论历年真题解析</td>
+                        <td align="center">14</td>
+                        <td align="center">580元</td>
+                        <td><a href="http://www.baidu.com" target="_blank"><img src="../img/晴天（白天） .png" alt=""></a></td>
+                        <td><a href="http://www.baidu.com" target="_blank"><img src="../img/晴天（白天） .png" alt=""></a></td>
+                    </tr>
+                </tBody>
+            </table>
+        </div>
+        <div id="div2">
+            <form>
+                <p>电子邮箱：<input type="text"></p>
+                <p>设置密码：<input type="password"></p>
+                <p>真实姓名：<input type="text"></p>
+                <p>性别：<input type="radio" name="gander" id="man"><label for="man">男</label>
+                    <input type="radio" name="gander" id="woman"><label for="woman">女</label>
+                </p>
+                <p>生日：
+                    <select>
+                        <option selected disabled>请选择</option>
+                        <option>1998</option>  <option>1997</option>  <option>1996</option>  <option>1995</option>  <option>1994</option>
+                    </select>年
+                    <select>
+                        <option selected disabled>--</option>
+                        <option>1</option>  <option>2</option>  <option>3</option>  <option>4</option>  <option>5</option>  <option>6</option>  <option>7</option>  <option>8</option>
+                        <option>9</option>  <option>10</option>  <option>11</option>  <option>12</option>
+                    </select>月
+                    <select>
+                        <option selected disabled>--</option>
+                        <option>1</option>  <option>2</option>  <option>3</option>  <option>4</option>  <option>5</option>  <option>6</option>  <option>7</option>  <option>8</option>
+                        <option>9</option>  <option>10</option>  <option>11</option>  <option>12</option>  <option>13</option>  <option>14</option>  <option>15</option>
+                        <option>16</option>  <option>17</option>  <option>18</option>
+                    </select>日
+                </p>
+                <a href="http://www.baidu.com" target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<ins>为什么要写我的生日？</ins></a>
+                <p>我现在：
+                    <select>
+                        <option>请选择身份</option>
+                    </select>
+                </p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../img/晴天（白天） .png"><em>看不清楚换一张？</em>
+                <p>验证码：<input type="text"></p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http:/www.baidu.com" target="_blank"><img src="../img/大雨.png" ></a>
+            </form>
+        </div>
+        <div id="div3">
+            <table border="1" cellpadding="5" align="center">
+                <tHead>
+                    <tr>
+                        <th>班次名称</th>
+                        <th>科目</th>
+                        <th>授课内容</th>
+                        <th>增值服务</th>
+                        <th>课时</th>
+                        <th>价格</th>
+                        <th>试听</th>
+                        <th>购买</th>
+                    </tr>
+                </tHead>
+                <tBody>
+                    <tr>
+                        <td  rowspan="3" align="center">真题精解班</td>
+                        <td align="center">行测*申论</td>
+                        <td align="center">全科历年真题解析</td>
+                        <td rowspan="3" align="center">课后赠2套模拟卷24小时以内答疑</td>
+                        <td align="center">48</td>
+                        <td align="center">1280元</td>
+                        <td><a href="http://www.baidu.com" target="_blank"><img src="../img/晴天（白天） .png" alt=""></a></td>
+                        <td><a href="http://www.baidu.com" target="_blank"><img src="../img/晴天（白天） .png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                        <td align="center">行测</td>
+                        <td align="center">行测历年真题解析</td>
+                        <td align="center">32</td>
+                        <td align="center">980元</td>
+                        <td><a href="http://www.baidu.com" target="_blank"><img src="../img/晴天（白天） .png" alt=""></a></td>
+                        <td><a href="http://www.baidu.com" target="_blank"><img src="../img/晴天（白天） .png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                        <td align="center">申论</td>
+                        <td align="center">申论历年真题解析</td>
+                        <td align="center">16</td>
+                        <td align="center">580元</td>
+                        <td><a href="http://www.baidu.com" target="_blank"><img src="../img/晴天（白天） .png" alt=""></a></td>
+                        <td><a href="http://www.baidu.com" target="_blank"><img src="../img/晴天（白天） .png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3" >高分技巧班</td>
+                        <td align="center">行测*申论</td>
+                        <td align="center">全科技巧强化</td>
+                        <td rowspan="3" align="center">入学试卷测评24小时内答疑</td>
+                        <td align="center">32</td>
+                        <td align="center">980元</td>
+                        <td><a href="http://www.baidu.com" target="_blank"><img src="../img/晴天（白天） .png" alt=""></a></td>
+                        <td><a href="http://www.baidu.com" target="_blank"><img src="../img/晴天（白天） .png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                        <td align="center">行测</td>
+                        <td align="center">行测历年真题解析</td>
+                        <td align="center">32</td>
+                        <td align="center">680元</td>
+                        <td><a href="http://www.baidu.com" target="_blank"><img src="../img/晴天（白天） .png" alt=""></a></td>
+                        <td><a href="http://www.baidu.com" target="_blank"><img src="../img/晴天（白天） .png" alt=""></a></td>
+                    </tr>
+                    <tr>
+                        <td align="center">申论</td>
+                        <td align="center">申论历年真题解析</td>
+                        <td align="center">14</td>
+                        <td align="center">580元</td>
+                        <td><a href="http://www.baidu.com" target="_blank"><img src="../img/晴天（白天） .png" alt=""></a></td>
+                        <td><a href="http://www.baidu.com" target="_blank"><img src="../img/晴天（白天） .png" alt=""></a></td>
+                    </tr>
+                 </tBody>
+            </table>
+        </div>
+    </body>
+</html>

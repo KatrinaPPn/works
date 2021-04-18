@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML之CSS盒子模型</title>
+        <style>
+            /* #box1{
+                width:300px;
+                height:500px;
+                background:burlywood;
+                border:5px blueviolet solid;
+                padding:40px;
+                margin: 19px;
+            }
+            #box2{
+                width:300px;
+                height:300px;
+                background:cadetblue;
+
+            } */
+
+            /* margin叠加问题 */
+            /* #box1{
+                width:300px;
+                height:300px;
+                background:cadetblue;
+                margin-top: 30px;
+            }
+            #box2{
+                width:300px;
+                height:300px;
+                background:cadetblue;
+                margin-top: 20px;
+            } */
+            /* 不会出现30+20=50px的，只会选取较大的（30）进行设置 */
+
+            /* margin传递问题：这样设置时会出现传递问题，导致父盒子也往下移动150px */
+            /* #box1{
+                width:300px;
+                height:300px;
+                background:cadetblue;
+            }
+            #box2{
+                width:150px;
+                height:150px;
+                background:burlywood;
+                margin-top: 150px;
+            }  */
+            /* 解决办法：父盒子将margin换成padding ,相对应的weight或者height也需要修改*/
+            #box1{
+                width:300px;
+                height:150px;
+                background:cadetblue;
+                padding-top:150px;
+            }
+            #box2{
+                width:150px;
+                height:150px;
+                background:burlywood;
+            } 
+
+        </style>
+    </head>
+    <body>
+        <!-- <div id="box1">this is a box</div>
+        <div id="box2">this is another box</id> -->
+
+            <!-- margin叠加问题 -->
+            <!-- <div id="box1">this is a box</div>
+            <div id="box2">this is a box</div> -->
+
+            <!-- margin传递问题 -->
+            <div id="box1">
+                <div id="box2"></div>
+            </div>
+    </body>
+</html>

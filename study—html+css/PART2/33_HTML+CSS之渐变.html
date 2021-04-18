@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>渐变</title>
+    <style>
+        .box{
+            width: 300px;  height: 300px;
+            border: 1px black solid ;
+            background-image: linear-gradient( to right,  red,blue);
+            background-image: linear-gradient( 45deg,  red,blue);
+        }
+        
+        .box1{
+            width: 300px;  height: 300px;
+            border: 1px black solid ;
+            background-image: linear-gradient(  red 25%,blue 75%);
+        }
+
+        .box2{ 
+            width: 300px;  height: 300px;
+            border: 1px black solid ;
+            background-image: linear-gradient(  red 50%,blue 50%);
+        }
+
+        .box3{ 
+            width: 300px;  height: 300px;
+            border: 1px black solid ;
+            background-image: radial-gradient(  red ,blue );
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <br><br>
+    <div class="box1"></div>
+    <p>一个盒子里两种颜色</p>
+    <div class="box2"></div>
+    <p>径向渐变</p>
+    <div class="box3"></div>
+</body>
+</html>

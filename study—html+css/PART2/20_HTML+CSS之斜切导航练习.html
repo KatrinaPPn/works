@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>斜切导航</title>
+    <style>
+        *{ margin: 0; padding: 0;}
+        ul{ list-style: none;}
+        ul{ width: 435px; margin: 30px auto; overflow: hidden;}
+        ul li{ 
+            float: left;
+            width: 100px;
+            height: 30px;
+            background: red;
+            color: white;
+            line-height: 30px;
+            text-align: center;
+            margin: 0 5px;
+            cursor: pointer;
+            transform: skewX(-30deg);
+        }
+        ul span{
+            display: block;
+            transform: skewX(30deg);
+        }
+        /* padding使得盒子边长，然后margin把盒子移出去，用overflow将溢出隐藏 */
+        ul li:first-child{
+            padding-left: 10px;
+            margin-left: -10px;
+        }
+        ul li:last-child{
+            padding-right: 20px;
+            margin-right: -20px;
+        }
+        ul .active{
+            background: brown;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li class="active"><span>首页</span></li>
+            <li><span>关于我们</span></li>
+            <li><span>联系方式</span></li>
+            <li><span>招聘信息</span></li>
+        </ul>
+    </div>
+</body>
+</html>

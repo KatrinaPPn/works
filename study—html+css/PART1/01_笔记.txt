@@ -1,0 +1,771 @@
+1.快捷键
+    多光标：alt+鼠标左键
+    ctrl + d ：选择相同元素的下一个
+    ctrl + end ： 从头选中一行
+    ctrl + home ：从后选中一行
+    shift + alt + 👇 ：快速复制一行
+    alt + 👆 或 👇 ：快速移动一行
+
+2.HTML、CSS、JavaScript
+    HTML负责构建结构，CSS负责样式（美化结构）
+    而JavaScript负责行为（与用户的交互行为）
+
+3.HTML基本结构与属性
+
+    HTML ：超文本 标记 语言
+
+    超文本 ： 文本内容 + 非文本内容（图片、视频、音频等）
+
+    标记（标签）：<单词>，有两种形式，分为单标签<header>、双标签 <header></header>。标签可以进行上下排列和组合嵌套
+    标签的属性：修饰标签的，设置当前标签的一些功能，<标签 属性“值”  属性2=“值2”  ....>
+
+4.HTML初始代码
+创建快捷键 ！+ tab
+
+<!DOCTYPE html>    文档声明 ：告诉浏览器这是一个HTML文件
+<html lang="en">   HTML文件的最外层标签：包裹着所有HTML标签代码，lang="en"表示是一个英文网站lang="zh-CN"表示一个中文网站
+    <head>         网页头部，地址栏以上
+        <meta charset="UTF-8">    元信息：编写网页中的一些附加信息。这句话意思是该网页以字符集为UTF-8格式来显示
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>   设置网页的标题
+    </head>
+    <body>    网页的身体，地址栏以下，显示网页内容的区域
+        
+    </body>
+</html>
+
+5.HTML注释：
+    <!-- 注释的内容 -->
+    意义：把暂时不用的代码注释起来方便以后使用；对开发人员进行提示作用
+    快捷键：1.ctrl + /    2. shift + alt + a  （要先选中）
+
+6.HTML 语义化
+        根据网页内容选择对应适用的标签来进行显示
+        作用：1.即便没有CSS也能很好地呈现内容结构
+            2.利于SEO，让搜索引擎爬虫更好地理解网页
+            3.方便其他设备解析（如屏幕阅读器、盲人阅读器等）
+            4.便于团队开发和维护
+
+标签~~
+
+1.标题
+    双标签：<h1></h1>  ....  <h2></h2>
+    在一个网页中，h1标题最重要且每个html文件中仅有一个，而其他的h2、h3...可多个，h5和h6不常用
+
+2.段落
+    双标签：<p></p>
+
+3.文本修饰标签
+    <strong></strong>：双标签，表示强调，会对文本进行加粗
+    <em></em>：双标签，表示强调，会对文本进行斜体显示
+    <sub>：下标文本  如水分子的化学式表示
+    <sup>：上标文本  如平方的表示
+    <del>：删除文本，会在文本加个划线
+    <ins>：插入文本，会在文本加个下划线
+
+4.图片标签与图片属性
+    图片标签（单标签）： <img> 
+    属性：src  引入图片地址
+          alt  当图片出现问题时，可以显示一段友好的提示文字
+          title  提示信息
+          width、height  设置图片大小
+
+5.引入文件的路径
+    a. 相对路径：参照当前文件的位置来表示要引用文件的位置
+            .在路径中表示当前路径
+            ..表示上一级路径
+    b. 绝对路径：没有参照物，直接给个详细完整的地址出来，此方式常用点，而且写路径时可以省略盘符，记住是在Windows下，斜线跟反斜线都可以，但是如果引用网络上的图就一定要用斜线
+    尽量写斜线！！！
+
+6.链接标签
+    a ->  双标签 <a></a>
+    常用属性   href：链接地址
+              target：可以改变链接打开的方式，默认情况下，_self 表示当前页面打开，_blank 表示新页面打开
+    base -> 单标签：改变链接的默认行为(常用于控制多个跳转链接打开方式)
+
+7.跳转锚点（跳转到当前页面的指定的位置，比如百度百科中的书签按钮，返回顶部的按钮）
+    也是利用a标签实现，有两种方式：
+    A. #id号名    在某个标题标签里面添加id属性
+    B. #name名    新加一个a标签，添加name属性
+
+8.特殊符号
+    格式：&+字符
+    一些输入法无法直接输入的符号
+    通常用到<>时会经常使用，以避免与原来的标签括号混乱  &lt <    &gt >
+    显示多个空格的时候也会用到    &nbsp
+
+9.列表标签
+    A. 无序列表：<ul> <li>组合，都是双标签，注意两者之间是嵌套关系，且并于成对出现，两者之间不能有其他标签，但是<il>内部可以有其他标签
+        type属性：改变前面标记的样式（一般都是用CSS实现）
+        语法格式：<ul type="属性值">
+    B. 有序列表：<ol> <li>组合，注意两者之间是嵌套关系，用得比较少可用无序列表代替
+    C. 定义列表：<dl> <dt> <dd>，列表项需要添加标题和对标题进行描述的内容时使用
+
+    列表之间可以相互嵌套
+
+10.表格标签
+    1.   <table> ：表格的最外层容器
+         <tr> ：定义表格行
+         <th> : 定义表头
+         <td> ：定义表格单元
+         <caption> ：定义表格标题
+     
+     注意：之前存在嵌套关系，要符合嵌套规范
+
+     常用的语义化标签：不会给网页带来任何效果，只是标记一下，使代码更友好（其目的只是为了使表格更加规范）
+     <tHead>   <tBody>   <tFood>
+     注意：在一个table标签里面，tHead标签和tFood标签只能出现一次，tBody可以出现多个
+
+     2.   表格属性
+     <border> : 表格边框
+     <cellpadding> : 单元格内的空间
+     <cellspacing> : 单元格之间的空间
+     <rowspan> : 合并行，一般用在tr标签里面
+     <colspan> : 合并列，一般用在td标签里面
+     <align> : 左右对齐方式，三个属性值，分别是left、center、right
+     <valign> : 上下对齐方式，三个属性值，分别是top、middle、bottom
+
+11.表单标签
+    <form> ：表单的最外层容器  其常用属性为action=“地址”，用于结合file、submit等控件提交数据时使用，表示提交的地址
+    <input> ：单标签，标签用途搜集用户信息，根据不用的type属性值，展示同的控件，比如输入框（text）、密码框（password）、复选框（checkbox）、单选框（radio）、多行文本框（textarea）等    
+             格式：<input type="属性值">
+             注意：
+             A. 若要将同一组的按钮组合在一起且要呈现单选状态，需要加name属性，并且自定义一个名字  格式：<input type="控件属性值" name="自定义的名字">
+             B. checked属性实现预先选定效果
+             C. disabled属性实现不可选效果
+             D. placeholder属性实现用户内容提示功能
+             E. textarea控件中，使用cols和rows来控制可输入的行和列
+             F. select控件：格式：<select>
+                                    <option>内容1</option>
+                                    <option>内容2</option>
+                                    <option>内容3</option>
+                                    ......
+                                </select>
+                            注意：
+                            1.在option标签中可使用selected、disabled来改变默认选择项、不可选项等问题
+                            2.在select标签中：
+                                size属性：控制显示的选项数目
+                                multiple属性：是否可以多选（该标签也可用于file控件中，实现拖选文件的功能）
+             G. 单选框中，可以通过input标签与label标签组合使用来实现对应映射关系，使用户无论点击单选框还是对应的文字都能实现有效选择，提升用户体验。注意：id属性与for属性是一一对应的映射，一组映射它俩的属性值要相同，如下：
+                    <input type="radio" name="gender" id="man"><label for="man">男</label>
+                    <input type="radio" name="gender" id="women"><label for="women">女</label>
+    注意：表单跟表格嵌套时，应该将表格标签嵌套在表单里面，因为表格标签有嵌套规定而表单没有
+
+12.<div>标签与<span>标签
+    <div>：division 块，该标签用于划分一个区域，相当于一块区域容器，容纳段落、标题、表格、图像等各种网页元素（HTML中大多数标签都可嵌套在div标签里），div标签也可互相嵌套多层div，用于将网页分割成独立的、不同的部分，实现网页规划与布局
+
+    <span>：内联，修饰文字，与div一样没有任何默认样式，需配合CSS使用
+
+
+
+CSS
+13. CSS基础语法
+    选择器 { 属性1： 值1；属性2：值2；.......}
+
+    常用的属性：width: 宽     height：高     background-color ：背景色
+
+    长度单位：
+        A. px -> 像素
+        B. % -> 百分比
+            根据外容器来设定当前容器大小：
+                假如  外容器600px，当前容器大小为50%，则表示当前容器为300px
+    
+    注释符号： /* 注释内容 */
+
+
+
+14.CSS样式的引入方式
+    A. 内联样式
+        style属性
+    B. 内部样式
+        style标签
+        区别：
+        内部样式的代码可以复用，符合W3C的规范标准，尽量让结构和样式分开处理
+
+    C.外部样式
+        引入一个单独的CSS文件 name.css
+
+        方式一：
+            通过link标签引入外部资源，rel属性指定资源跟页面的关系，href属性资源的地址
+        
+        方式二：
+            通过在style标签内写@import进行引入，但是这种方法有许多问题，不建议使用
+            格式：
+                <style>
+                    @import url('所引入的文件路径');
+                </style>
+        
+        注意：link引入跟import引入的区别详细可参考：https://www.cnblogs.com/my--sunshine/p/6872224.html
+
+15.css的颜色表示法
+    A. 单词表示法：red  blue green yellow....
+
+    B. 十六进制表示法：#000000 ~ #ffffffff
+
+    C. rgb三原色表示法：rgb(0,0,0)  ~  rgb(255,255,255)
+
+    提取颜色的下载地址：https://www.baidufe.com/fehelper
+ 
+ 16.css背景样式
+    
+    background-color：背景颜色
+    background-image：背景图片
+            url(背景图片地址)
+            默认：水平垂直都铺满背景图
+    background-repeat：背景图片的平铺方式
+            repeat-X ： x轴平铺
+            repeat-y ： y轴平铺
+            repeat ：x，y都进行平铺，默认值
+            no-repeat ： 都不平铺（会在0，0的位置显示，如果背景图规格大于容器规格则会溢出，小于则相反）
+    background-position：背景图片的位置
+            x y ：number（px、%都行） | 单词
+                number时：为正，向下向右偏移；为负向左向上偏移
+                x的可选单词 ： left、center、bottom
+                y的可选单词 ： top、center、bottom
+    background-attachment：背景图随滚动条移动方式
+            scroll：默认值，背景图位置是按照当前元素进行偏移的
+            fixed: 背景图位置是按照浏览器进行偏移的（若背景图位置超过了容器最大的范围（溢出），则会显示不出来）
+
+17.css边框样式
+    border-style ： 边框样式
+        solid：实现
+        dashed：虚线
+        dotted：点线
+    border-width ： 边框大小
+        px....
+    border-wolor ： 边框颜色
+        red yellow .....
+
+    边框也可以针对某一条边进行单独设置：border-left-style，可选的还有right、top、bottom
+
+    颜色：透明颜色 transparent
+
+18.css文字样式
+    font-family： 字体类型
+            英文字体：Arial、'Rimes New Roman'
+            中文字体：微软雅黑（'Microsoft YaHei'）、宋体（SimSun）
+            默认字体：微软雅黑
+            字体分为衬线体与非衬线体，衬线体字体有棱角（比如宋体），非衬线会比较平滑，现在非衬线体用得比较多，因为它更符合扁平化设计风格，视觉上更简洁
+        注意：
+            A. 英文字体只会对英文起作用，对中文不会有效果的，而中文字体是可以对英文和中文同时起作用的
+            B. 设置多字体：尽量设置多字体，使用户个人计算机内缺失对应首选字体时有可选的备选方案。（若都不存在对应字体则会按照系统默认字体进行显示）
+            C. 字体引号问题：若名字中存在空格要加引号括起来，否则会出错
+    
+    font-size：字体大小
+            默认：16px
+                写法：number（px） |  单词
+                单词表示法：xx-small 最小           x-small  较小
+                           small  小               medium  正常（默认值）
+                           large  大               x-large  较大
+                           xx-large  最大
+            注：
+                A. 一般不选取单词作为大小设置，因为单词是不确定具体是多大的，而且有可能存在单数的px
+                B. 字体大小一般为偶数，为了方便文字对齐，减少偏差
+    font-weight：字体粗细
+            模式： 正常（normal）   加粗（bold）
+            写法： 单词（normal、bold）  |   number（100  200  ...... 900，100 ~ 500都是正常的，600 ~ 900都是加粗）
+
+    font-style：字体样式
+            模式：正常（normal）   斜体（italic）
+            写法：单词（normal、italic）
+            注：oblique也是斜体，用得较少
+                区别：italic 带有倾斜属性的字体才可以设置倾斜操作
+                      oblique 没有倾斜属性的字体也可以设置倾斜操作
+
+    color：字体颜色
+
+19.css段落样式
+    text-decoration：文本装饰，可以添加多个文本修饰，只需空格隔开就可以
+        下划线  underline
+        删除线  line-through
+        上划线  overline
+        不添加任何装饰  none
+
+    text-transform：文本大小写（针对英文段落）
+        小写  lowercase
+        大写  uppercase
+        只针对首字母大写  capitalize
+    
+    text-indent：文本缩进
+        首行缩进
+        em单位：相对单位，1em永远跟字体大小相同
+
+    text-align：文本对齐方式
+        对齐方式：left、right、justify（两端对齐）
+    
+    line-height：定义行高
+        行高：一行文字的高度，上边距和下边距是等价关系
+        默认行高：不是固定值，而是根据当前字体大小动态变化
+
+        取值：number (px)  |  scale (比例值，跟文字大小成比例)
+    
+    letter-spacing : 字之间的间距
+
+    word-spacing ：词之间的间距（针对英文）
+
+    英文与数字不自动折行问题解决方法：
+        word-break：break-all（非常强烈的折行）
+        word-warp：break-word（不那么强烈的折行，会产生一些空白区域）
+
+20.css复合样式
+    一个css属性只控制一种样式，叫做单一样式
+    一个css属性控制多种样式，叫做复合样式
+
+    复合样式：
+        复合写法：通过空格方式实现，有些不需要关心顺序，有些需要关心顺序（如font）
+            background：red url() repeat 0 0;
+            border：1px red solid;
+            font : 
+               住：font最少需要有两个值，且顺序不能乱，否则会没效果 ：
+                    size family                     √
+                    weight style size family        √
+                    style weight size family        √
+                    weight style size/line-height family        √
+    注：最好单一样式和复合样式混合写
+        若非要混合写，则需要先写复合样式，再写单一，避免单一样式被复合样式覆盖
+
+21.css选择器
+    ID选择器：
+        格式：      css： #elem{}
+                    html：  id=“elem”
+        注：ID是唯一值，同一个页面中只能出现一次，出现多次是不符合规范的
+            命名的规范，由字母、数字、下划线、中划线组成，首位不能是数字
+            驼峰写法：searchButtom（小驼峰）   SearchButtom（大驼峰）
+            短线写法：search-samll-butttom
+            下划线写法：search_small_buttom
+
+    class选择器：
+        格式：      css： .elem{}
+                    html：  class=“elem”
+        注：class选择器是可以复用的
+            可以添加多个class样式
+            多个样式的时候，样式的优先级根据css决定，而不是class属性中的顺序
+            标签+类的写法
+
+    标签选择器（TAG选择器）：
+        格式：      css: div{}
+                    html: <div></div>
+        使用场景：去掉某些标签的默认样式时；复杂的选择器中，如层次选择器
+    
+    群组选择器（分组选择器）：
+        可以通过逗号的方式，给多个不同的选择器添加统一的css样式，简化代码，实现代码复用
+
+    通配选择器：
+        格式：  css：*{} 
+        注：尽量避免使用通配选择器，因为会给页面所有的标签添加样式，慎用
+        使用场景：去掉所有标签的默认样式时
+
+    层次选择器：
+        后代 M N{ }  ：后代所有人都具有此属性，子子孙孙
+        父子 M > N{ }  ：仅仅是父子之间有，孙辈没有
+        兄弟 M ~ N{ }  : 当前M下面的所有兄弟N标签
+        相邻 M + N{ }  : 当前M下面相邻的第一个N标签
+    
+    属性选择器:
+        M[attr] {}
+        = : 完全匹配
+        *= : 部分匹配
+        ^= : 起始匹配
+        $= : 结束匹配
+        [][][] : 组合匹配
+
+    伪类选择器: 用于向某些元素添加特殊的效果.一般用于初始样式添加不上的时候
+        格式:   M:伪类{}
+    
+        常见的伪类:
+            :link       访问前的样式(只能添加给A标签)
+            :visited    访问后的样式(只能添加给A标签)
+            :hover      鼠标移入时的样式
+            :active     鼠标按下时的样式
+        
+        注意:    四个伪类都生效,一定要注意编写顺序: L V H A
+                 一般网站只设置:a{}初始样式, 和 a:hover的样式
+        
+            :after  :before   通过伪类的方式给元素前或后添加某样东西,如一段文本内容时用content属性
+            :checked   :disabled    :focus    都是针对表单元素的
+
+        结构性伪类选择器:
+            nth-of-type()   nth-child()
+            角标从1开始，1为第一项；n表示0到无穷大，常用于隔行换色
+
+            first-of-type：首项
+            last-of-type: 尾项
+            only-of-type: 仅有一项时才会奏效
+
+            nth-of-type()和nth-child()的区别：
+                type: 类型，同一个类型里面的哪一项
+                child：孩子，同个父亲的孩子中的哪一个孩子
+
+22.css样式继承（inherited）
+    文字相关样式可以被继承
+    布局相关样式不可以被继承  （默认不能继承，但可以设置继承属性inherited实现继承）
+
+23.css优先级
+    相同样式优先级：
+        当设置相同样式时，后面的优先级较高，但不建议出现重复设置样式的情况
+
+    内部样式与外部样式：
+        内部样式与外部样式优先级相同，如果设置了相同样式，那后写的引入方式优先级高
+
+    单一样式优先级：
+        style行间 > id > class > tag > * > 继承
+        注：style行间    权重    1000
+            id          权重    100
+            class       权重    10
+            tag         权重    1
+
+        !important ：用于提升样式优先级，非规范方式，不建议使用，只有在结构已经很复杂不方便移动修改时才用
+            注：继承不适用
+
+        标签+类 VS 单类：标签+类 > 单类   如： div.box  >  .box
+
+        群组优先级：群组选择器与单一选择器的优先级相同，靠后写的优先级高
+
+    层次优先级：
+        权重比较
+            ul li .box p input{}    1 + 1 + 10 + 1 + 1
+            .hello span #elem{}     10 + 1+ 100  （优先级高）
+        
+        约分比较（同级别的越掉）
+            ul li .box p input{}    约分后：li p input{}   只剩下了tag等级的，权重为1
+            .hello span #elem{}     约分后：#elem{}         只剩下id等级的，权重为100，所以优先级高
+    
+24.css盒子模型
+    组成： content ->    padding    ->      border      ->       margin         组成的
+            物品        填充物              包装盒                盒子与盒子之间的距离
+        
+        content ：内容区域  width和height控制
+
+        padding ：内边距（内填充）
+            只写一个值： 30px （上下左右）
+            写两个值： 30px 40px（上下、左右）
+            写四个值： 30px 40px 50px 60px （上、下、左、右）
+
+            单一样式只能写一个值：
+                padding-left、padding-right、padding-top、padding-bottom
+        
+        margin ： 外边距（外填充）
+            只写一个值： 30px （上下左右）
+            写两个值： 30px 40px（上下、左右）
+            写四个值： 30px 40px 50px 60px （上、下、左、右） 
+
+            单一样式只能写一个值：
+                margin-left、margin-right、margin-top、margin-bottom
+
+    注：  
+        背景颜色会填充到margin以内区域，若设置了border则会显示border的颜色，否则会被背景色填充
+        文字会在content区域
+        padding不能出现负值，margin是可以出现负值的
+
+    box-sizing：盒子尺寸，可以改变盒子模型的展示形态
+        默认值：content-box：width、height  （只作用于content区域）
+        其他值：border-box：width、height   （作用于content、padding、border区域）
+        
+        使用场景：不用再去计算一些值和解决一些100%的问题
+
+    盒子模型的问题：
+        (1) margin叠加问题：出现在上下margin同时存在时，不是单纯的累加，而是会取上下中值较大的作为叠加值
+
+            解决方案：
+                BFC规范
+                想办法只给一个元素添加间距
+
+        (2) margin传递问题：只会出现在嵌套的结构中，且只有margin-top会有传递问题，其他三个方向没有
+
+            解决方案：
+                BFC规范
+                给父容器加边框
+                给父容器的margin换成padding
+    扩展:
+        margin可以左右自适应,但上下不可以    margin: 0 auto  (无论浏览器大小如何改变,都可以自动居中显示)
+        weight  height不设置时对盒子的影响:会自动计算容器大小,节省代码
+
+25.标签分类
+    (1) 按类型:
+        block(块) : div  p   ul   li   h1 ...
+            ① 独占一行
+            ② 支持所有样式
+            ③ 不写宽的时候，跟父元素的宽相同
+            ④ 所占区域是一个矩形
+
+
+        inline(内联) : span  a   em   strong   img(特殊：可以支持设置宽高)  ...
+            ① 挨在一起
+            ② 有些样式不支持
+            ③ 不写宽的时候，宽由内容决定
+            ④ 所占区域不一定是个矩形
+            ⑤ 内联标签之间会有空隙，原因：换行产生的            
+            
+        inline-bock(内联块) : input   select ...
+            ① 挨在一起，支持宽高
+            ② 支持所有样式
+            ③ 标签之间会有空隙
+            ④ 所占区域是一个矩形
+            （基本同时具备块与内联的所有特性）
+        
+        注：布局一般用块标签，修饰文本一般用内联标签
+
+    (2) 按内容：（具体包含哪些可以看img里面的截图）
+        flow ： 流内容
+        metadata ： 元数据
+        sectioning ： 分区
+        heading ： 标题
+        phrasing ： 措辞
+        embedded ： 嵌入的
+        interactive ： 互动的
+
+    (3) 按显示
+        替换元素： 浏览器根据显示元素的标签和属性，来决定元素的具体显示内容，如<img> <input>
+        非替换元素： 将内容直接告诉浏览器，将其显示出来 ，如：<h1>
+
+26.显示框类型
+    display : block \ inline \ inline-block \ none \ ....
+
+    display: none 与 visibility ： none 的区别：
+        display: none   不占空间的隐藏
+        visibility ： none    占空间的隐藏
+
+27.标签嵌套规范
+
+    (1) 块标签可以嵌套内联标签
+            <div>
+                <span></span>
+                <a href="#"></a>
+            </div>
+
+    (2) 块可以嵌套块，但是p标签等除外
+            <div>
+                <div></div>
+            </div>
+        特殊：错误写法：
+            <p>
+                <div></div>
+            </p>
+
+    (3) 内联不能嵌套块，但是a标签例外，a标签可以嵌套块，不过a标签里面不能再嵌套a标签
+
+        错误写法：
+            <span>
+                <div></div>
+            </span>
+        特殊：正确写法：
+            <a href="#">
+                <div></div>
+            </p>
+
+    常见的固定嵌套：
+        ul  li
+        dl  dt  dd
+        table  tr  td
+
+28.溢出隐藏
+    overflow : 
+        可选值如下
+            visible：默认值
+            hidden：隐藏溢出的内容
+            scroll：溢出时显示x、y轴的滚动条
+            auto：溢出时显示y轴的滚动条
+
+    overflow可以单独设置x、y轴：
+             overflow-x、overflow-y
+
+29.透明度与手势
+
+    opacity ： 0（透明）~ 1（不透明）    0.5半透明
+
+        注：透明时也是占空间的，并且无论是透明、半透明还是不透明都会相应地影响其所有的子内容显示的透明度
+
+    rgba(0,0,0,0) : 最后一位取值为0 ~ 1，表示透明度
+
+        注：可以让指定的样式透明，而不影响其他样式
+    
+    cursor : 手势
+        可选值如下
+            default：默认箭头
+            要实现自定义手势：
+                准备图片： .cur  或 .ico格式
+                cursor ： url(图片地址), auto;
+
+29.最大最小宽高
+    min-width、min-height    表示 最小不小于xxx，低于最小值时框的大小会按照最小值显示，超出部分框会自动扩大显示，不会溢出
+    max-width、max-height    表示 最大不大于xxx，在最大值内框的大小会自适应，超出部分会溢出
+
+    %单位： 换算规则是-> 根据父容器的大小进行换算的，与爷爷等都无关
+
+    一个容器怎样适应屏幕的高： 容器加height：100%；   body：100%；   html：100%；
+        如：    
+            html, body{ height:100%; }
+            .box{ height:100%; }
+
+30. CSS默认样式（可以通过浏览器的开发者模式查看）
+    没有默认样式： div、 span
+
+    有默认样式： body -> margin ：8px
+
+                h1 -> margin ： 上下 21 440px
+                        font-weight：bold
+
+                p -> margin ： 上下 16px
+
+                ul -> margin ： 上下 16px padding ：左 40px
+                        默认前面带点  list-style ： disc
+                
+                a -> margin ： tetx-decoration： underline；
+
+    CSS样式重置
+
+        利用通配*进行样式重置
+        *{ margin：0; padding:0 }
+            优点：不用考虑哪些标签有默认值的margin和padding
+            缺点：稍微会影响性能
+        
+        挑选出单独要重置的标签进行设置
+        body, h1, p, ul{ }
+
+        常见的一些重置：
+            ul{ list-style: none;}  //去掉无序列表前的图标
+            
+            a{ text-decoration：none; color:#999; }    //去掉链接的下划线并换掉文字颜色
+            
+            img{ display： block; }   //让图片底部贴合容器底部（原理：利用块的特性）
+                重置原因： img默认状态图片的底部会出现一个缝隙的问题
+                问题出现原因：内联元素的对齐方式是按照按文字基线对齐的，而不是文字底线
+                
+                推荐的解决方法二：
+                    vertical-align: baseline;    基线对齐方式，默认
+                    img{ vertical-align: baseline;  }    
+
+31. ps操作
+    ctrl + r    隐藏参考线
+    alt + 滚轮   放大缩小图层
+
+    png等图片的切图步骤
+        方法一：
+            ① 通过矩形框工具选择指定区域
+                微调：alt 减少区域    shift 增加区域     上下左右键进行微调
+            ② ctrl + c ： 复制图层
+            ③ ctrl + n ： 新建图层
+            ④ ctrl + v ： 粘贴图层
+            ⑤ 存储为web格式
+
+        方法二：
+            ① 切片工具进行批量切图
+            ② 存储为web格式
+
+    psd文件切图
+        编辑  ->  首选项 -> 增强工具  ->   启用服务器
+        文件  ->  生成   ->  图片资源
+        选择工具   ->  选中需要切图的图案  ->  修改图层名字   ->   自动保存其切图
+
+32. float浮动
+    文档流：文档中可显示对象在排列时所占用的位置（即 网页结构的默认排列方式占用的位置）
+    float特性：加浮动的元素，会脱离文档流，会延迟父容器靠左或靠右排列，如果之前已有浮动的元素，会挨着浮动的元素进行排列
+    float取值：left、right、none（默认）
+        注意点：
+            ① 浮动的元素不会再影响父容器的大小，父容器受正常文档流大小影响
+            ② 只会影响后面的元素
+            ③ 默认宽根据内容决定
+            ④ 换行排列
+            ⑤ 主要给块元素添加，但也可以给内联元素添加
+            ⑥ 内容默认提升半层
+    
+    如何清除浮动？（不让前面的浮动影响到后面正常文档流的排列）
+        上下排列：用clear属性，清除浮动，可选值：left、right、both
+        嵌套排列：
+            固定宽高 ： 不推荐，不能把高度固定死，不适合做自适应的效果
+            父元素浮动 ： 不推荐，因为父容器浮动会影响到后面的元素
+            overflow ：hidden（BFC规范），如果有子元素想溢出，会受到影响
+            display ： inline-block（BFC规范），不推荐，父容器会影响到后面的元素
+            设置空标签 ：不推荐，会多添加一个标签
+            after伪类 ： 推荐，是空标签的加强版，目前各大公司的做法
+
+33. position定位
+    用于指定一个元素在文档中的定位方式。top、right、bottom、left属性则决定了该元素的最终位置
+    position的取值：
+        static（默认）：
+        relative：
+            如果没有定位偏移量，对元素本身没有任何影响
+            不是元素脱离文档流
+            不影响其他元素布局
+            left、top、right、bottom是相对于当前元素自身进行偏移的
+
+        absolute：
+            使元素完全脱离文档流
+            使内联元素支持宽高（让内联具备块特性）
+            使块元素默认宽根据内容决定（让块具备内联的特性）
+            如果有定位祖先元素相对于定位祖先元素发生偏移，没有定位祖先元素相对于整个文档发生偏移
+        
+        fixed固定定位：（常用于做弹窗跟返回顶部）
+            使元素完全脱离文档流
+            使内联元素支持宽高（让内联具备块特性）
+            使块元素默认宽根据内容决定（让块具备内联的特性）
+            相对于整个浏览器窗口进行偏移（不会根据定位祖先元素进行偏移），不受浏览器滚动条的影响
+        
+        sticky：粘性定位，在指定的位置，进行黏性操作
+    
+    z-index：调整排序
+
+34. 省略号
+    实现步骤：
+        ① 必须有一个固定的宽 width
+        ② 不让内容折行  white-space：nowrap
+        ③ 隐藏溢出的内容  overflow：hidden
+        ④ 添加省略号  text-overflow： ellipsis
+
+35. CSS sprite
+    css雪碧也叫css精灵，是一种网页图片应用处理方式。允许将一个页面涉及到的所有零星图片都包含到一张大图中去加载
+    好处：
+        减少图片质量，加快网页图片加载速度
+        减少图片的请求次数，加快网页的打开
+
+36. CSS border-radius 圆角操作
+    border-radio: 圆角半径
+    当圆角半径等于容器（正方形）一半时会形成一个圆
+
+
+37. 通栏与版心
+    通栏：自适应浏览器的宽度
+    版心：固定一个宽度，并且让容器剧中
+
+    开发注意点：
+    一般头部（导航）都是通用的，应该写到common.css中
+    banner一般是非公用的
+    浮动元素不会出现margin传递问题
+    加了定位要想自适应居中必须要有宽度width
+    防止margin传递的方法：  overflow：hidden
+    伪类选择器都是加给兄弟结点的
+    内联居中使用 text-align     块居中使用 margin： 0 auto
+    如果是不怎么变的图片可以设置为背景，如果是会根据需求变化的图片应该用img标签（比如广告位的图片）
+    如果导航需要添加overflow但是又不想固定死导航高度（使得超出的内容被隐藏的话），可以把高度设置为min-height
+    绝对定位之后，记得在下层容器来个width：100% 把容器撑开，不然会只按内容宽度进行显示（看定位的知识点）
+
+
+PART 2
+1. 发展史
+    1991年出现，1997年出现HTML4，1999年出现xhtml，2014后html5为主
+    1994年出现css，css2在1998出现，W3C推荐标准
+
+2. HTML与XHTML的区别
+    DOCTYPE文档及编码：由于内部解析不一样（xhtml沿用html4的解析，头部声明会更复杂）
+    元素大小写：html标签对大小写没有强制要求，但是xhtml标签必须按照严格的大小写规范
+    属性引号：html可以不加
+    图片的alt属性：html可以不加
+    单标签写法：xhtml的但标签结束时必须带有反斜杠 <input      />
+    双标签闭合：html可以不接结束标签，但是xhtml不行
+
+3. strong和b、em和i？
+    strong、b、em、i都是表示强调的标签
+    strong和b表示文本加粗
+    em和i表示文本斜体。
+    区别在于：
+        strong和em是具备语义化的，而b和i是不具备语义化的，一般网站需要强调选前者，但如果需要一行内有多个表现形式不同的元素是可以使用类似的不语义化标签，减少同一个元素添加多个class略显麻烦的情况
+
+4. 引用标签？
+    blockquote：引用大段的段落解释
+    q：引用小段的短语解释
+    abbr：缩写或首字母缩略词
+    address：引用文档地址信息
+    cite：引用著作的标题
+
+    目的：为了让浏览器更好地解析，以及方便搜索引擎检索到相关信息
